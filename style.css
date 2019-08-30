@@ -24,6 +24,7 @@ header {
 }
 
 header .link a:hover {
+  transition: 300ms;
   border-color: #ff9100;
   font-weight: 700;
   box-shadow: 1px 1px 2px #e0e0e0;
@@ -37,14 +38,15 @@ header .link_small {
 header .link a {
   padding-right: 8px;
   padding-left: 5px;
-  padding-bottom: 3px;
-  border: 1.3px solid whitesmoke;
+  padding-top: 1px;
+  padding-bottom: 2px;
+  border: 1.3px solid #f0f0f0;
   position: relative;
   border-radius: 5px;
   text-decoration: none;
   font-weight: 400;
   font-size: 1.3em;
-  color: #303a43;
+  color: #474747;
 }
 
 header .link {
@@ -201,8 +203,22 @@ header h1 {
     display: none;
   }
 
+  #Current {
+    padding-top: 7px;
+    padding-bottom: 1px;
+    padding-left: 4px;
+    padding-right: 4px;
+    color: #ff9100;
+    border-color: #ff9100;
+    box-shadow: 1px 1px 3px #e0e0e0;
+    margin-right: 7px;
+
+
+  }
+
   #About {
-    padding-top: 8px;
+    padding-top: 7px;
+    padding-bottom: 1px;
     padding-left: 4px;
     padding-right: 4px;
     margin-right: 6px;
@@ -215,6 +231,7 @@ header h1 {
   }
 
   header .link_small i:hover {
+    transition: 300ms;
     color: #ff9100;
     border-color: #ff9100;
     box-shadow: 1px 1px 3px #e0e0e0;
@@ -222,7 +239,7 @@ header h1 {
 
   header .link_small i {
     font-size: 18px;
-    color: #303a43;
+    color: #555555;
     width: 24px;
     height: 24px;
     margin: 0;
@@ -235,6 +252,7 @@ header h1 {
   }
 
   header .link_small {
+    padding-top: 4px;
     display: flex;
     right: 10px;
     height: 100%;
