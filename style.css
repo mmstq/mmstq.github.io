@@ -203,6 +203,8 @@ header #abouttext {
 
 }
 
+/* media query*/
+
 @media (max-width: 420px) {
   header {
     height: 10%;
@@ -273,6 +275,7 @@ header #abouttext {
     margin-right: 7px;
 
   }
+
 
   .fa-user {
     padding-top: 7px;
