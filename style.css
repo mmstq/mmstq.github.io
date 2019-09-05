@@ -55,8 +55,10 @@ header .link {
   top: 50%;
 }
 
+
+
 header h1 {
-  font-size: 3.1em;
+  font-size: 2.9em;
   margin: 0;
   top: 50%;
   position: absolute;
@@ -149,6 +151,58 @@ header h1 {
   padding-top: 9px;
 }
 
+/* about CSS */
+
+header #abouttext {
+  font-size: 2.3em;
+}
+
+.content-about {
+  color: #303a43;
+}
+
+.content-about img {
+  margin: auto;
+  position: absolute;
+  top: 100px;
+  height: 120px;
+  width: 120px;
+}
+
+.content-about #description h1 {
+  padding: 0;
+  font-family: "Caveat", cursive;
+  font-size: 2em;
+}
+
+.content-about #description h5 {
+  font-weight: 600;
+  padding: 0;
+  font-family: "Caveat", cursive;
+  font-size: 1.3em;
+}
+
+
+
+.content-about #description {
+  text-shadow: 1px 1px 1px darkgray;
+  display: flex;
+  justify-content: center;
+  top: 45px;
+  margin-left: 30px;
+  height: 120px;
+}
+
+.content-about {
+  margin: auto;
+  padding: 10px;
+  height: 75%;
+  color: #303a43;
+  display: flex;
+  align-self: center;
+
+}
+
 @media (max-width: 420px) {
   header {
     height: 10%;
@@ -204,19 +258,23 @@ header h1 {
   }
 
   #Current {
+    margin-right: 2px;
+    margin-left: 2px;
+    color: #ff9100;
+    box-shadow: 2px 2px 3px #e0e0e0;
+    border-color: #ff9100;
+  }
+
+  .fa-home {
     padding-top: 7px;
     padding-bottom: 1px;
     padding-left: 4px;
     padding-right: 4px;
-    color: #ff9100;
-    border-color: #ff9100;
-    box-shadow: 1px 1px 3px #e0e0e0;
     margin-right: 7px;
-
 
   }
 
-  #About {
+  .fa-user {
     padding-top: 7px;
     padding-bottom: 1px;
     padding-left: 4px;
@@ -224,7 +282,7 @@ header h1 {
     margin-right: 6px;
   }
 
-  #Projects {
+  .fa-rocket {
     padding-top: 8px;
     padding-left: 4px;
     padding-right: 4px;
@@ -237,7 +295,15 @@ header h1 {
     box-shadow: 1px 1px 3px #e0e0e0;
   }
 
+  header .link_small a {
+    margin-left: 3px;
+    align-self: center;
+
+  }
+
   header .link_small i {
+    box-shadow: 1px 1px 1px #e0e0e0;
+
     font-size: 18px;
     color: #555555;
     width: 24px;
