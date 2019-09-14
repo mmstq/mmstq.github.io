@@ -9,7 +9,6 @@ body {
 header {
   line-height: 10%;
   height: 10%;
-  max-height: 12%;
   padding-left: 20px;
   display: flex;
   color: #303a43;
@@ -94,7 +93,7 @@ header h1 {
   padding-bottom: 10px;
   left: 0;
   right: 0;
-  max-height: 10%;
+  height: 10%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -150,6 +149,29 @@ header h1 {
   padding: 11px;
   padding-top: 9px;
 }
+
+/* project CSS */
+.split {
+  height: 80%;
+  position: fixed;
+  z-index: 1;
+  overflow-x: hidden;
+  top: 10%;
+  bottom: 10%;
+}
+
+.left {
+  left: 0;
+  background: #303a43;
+  width: 30%;
+}
+
+.right {
+  right: 0;
+  background: #ff9100;
+  width: 70%;
+}
+
 
 /* about CSS */
 
