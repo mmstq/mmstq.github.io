@@ -15,3 +15,29 @@ window.onload = function () {
     }
 
 }
+let right;
+window.onload = function () {
+    console.log("onload")
+    right = document.getElementById("right-div");
+    console.log(right)
+    right.onscroll = function () {
+        myFunction();
+        console.log("scroll");
+
+    };
+}
+
+
+function myFunction() {
+    var winScroll = document.body.scrollTop ||
+        document.documentElement.scrollTop;
+    console.log(winScroll);
+
+    var height = document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+    console.log(document.documentElement.scrollHeight);
+    var scrolled = (winScroll / height) * 100;
+    console.log(scrolled);
+    document.getElementById("myBar").style.height =
+        scrolled + "%";
+}

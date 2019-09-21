@@ -80,6 +80,8 @@ header h1 {
   background: #303a43;
 }
 
+/* Content CSS */
+
 .content {
   margin: auto;
   padding: 30px;
@@ -89,6 +91,17 @@ header h1 {
   align-items: center;
   justify-content: center;
 }
+
+.content #construction {
+  height: 50px;
+  bottom: 10%;
+  right: 10px;
+  position: fixed;
+}
+
+
+
+
 
 .social_btn {
   background: white;
@@ -123,7 +136,7 @@ header h1 {
   margin-left: 50px;
 }
 
-.content img {
+.content #me {
   width: 200px;
   align-items: center;
   height: 200px;
@@ -165,6 +178,25 @@ header h1 {
   left: 0;
   background: #303a43;
   width: 25%;
+}
+
+.right h4 {
+  padding: 20px;
+  font-family: "Caveat", cursive;
+  color: #303a43;
+
+}
+
+.progress-container {
+  height: 100%;
+  width: 8px;
+  background: #ccc;
+}
+
+.progress-bar {
+  height: 0%;
+  background: #4caf50;
+  width: 8px;
 }
 
 .right {
