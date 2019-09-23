@@ -94,13 +94,11 @@ header h1 {
 
 .content #construction {
   height: 50px;
+  width: 50px;
   bottom: 10%;
   right: 10px;
   position: fixed;
 }
-
-
-
 
 
 .social_btn {

@@ -3,6 +3,7 @@ function goTo(url) {
 }
 
 
+let right;
 window.onload = function () {
     document.getElementById('team').onclick = function () {
         goTo("https://stackoverflow.com/users/6439785/lekr0?tab=profile");
@@ -13,31 +14,27 @@ window.onload = function () {
     document.getElementById('linkedin').onclick = function () {
         goTo("https://linkedin.com/in/mohd-mustak-2b4100187");
     }
-
-}
-let right;
-window.onload = function () {
-    console.log("onload")
-    right = document.getElementById("right-div");
-    console.log(right)
+    var right = document.getElementById("right-div");
     right.onscroll = function () {
-        myFunction();
-        console.log("scroll");
+        myFunction(right);
 
     };
+
 }
 
 
-function myFunction() {
-    var winScroll = document.body.scrollTop ||
-        document.documentElement.scrollTop;
-    console.log(winScroll);
 
-    var height = document.documentElement.scrollHeight -
-        document.documentElement.clientHeight;
-    console.log(document.documentElement.scrollHeight);
-    var scrolled = (winScroll / height) * 100;
-    console.log(scrolled);
+function myFunction(right) {
+    var winScroll = right.scrollTop;
+    console.log("rightScrollTop: " + winScroll);
+
+
+
+    var height = right.scrollHeight;
+    console.log(right.scrollHeight);
+    var scrolled = (winScroll / height);
+    console.log(scrolled)
+    var percent = scrolled * 100;
     document.getElementById("myBar").style.height =
-        scrolled + "%";
+        percent + "%";
 }
