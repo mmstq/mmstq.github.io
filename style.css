@@ -72,11 +72,11 @@ header h1 {
 
 #circle {
   margin-left: 10px;
-  width: 40px;
-  height: 40px;
+  width: 37px;
+  height: 37px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
-  border-radius: 5px;
+  border-radius: 9px;
   background: #303a43;
 }
 
@@ -109,7 +109,9 @@ header h1 {
   right: 0;
   height: 8%;
   display: flex;
+  z-index: 2;
   align-items: center;
+  box-shadow: 1px 1px 7px #c4c4c4;
   justify-content: center;
 }
 
@@ -149,22 +151,22 @@ header h1 {
 }
 
 #github {
-  padding: 7px;
+  padding: 6px;
 }
 
 #team {
-  padding: 7px;
+  padding: 6.5px;
   padding-top: 4px;
 }
 
 #linkedin {
-  padding: 7px;
-  padding-top: 6px;
+  padding: 6px;
+  padding-top: 5px;
 }
 
 /* project CSS */
 .split {
-  height: 80%;
+  height: 82%;
   position: fixed;
   z-index: 1;
   overflow-x: hidden;
