@@ -72,11 +72,11 @@ header h1 {
 
 #circle {
   margin-left: 10px;
-  width: 43px;
-  height: 43px;
+  width: 40px;
+  height: 40px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
-  border-radius: 8px;
+  border-radius: 5px;
   background: #303a43;
 }
 
@@ -107,7 +107,7 @@ header h1 {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 10%;
+  height: 8%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -143,23 +143,23 @@ header h1 {
 .social_btn h4 {
   margin-right: 15px;
   font-family: "Caveat", cursive;
-  font-size: 35px;
-  font-weight: 700;
+  font-size: 30px;
+  font-weight: 600;
   color: #303a43;
 }
 
 #github {
-  padding: 8.5px;
+  padding: 7px;
 }
 
 #team {
-  padding: 8px;
-  padding-top: 5px;
+  padding: 7px;
+  padding-top: 4px;
 }
 
 #linkedin {
-  padding: 9px;
-  padding-top: 7px;
+  padding: 7px;
+  padding-top: 6px;
 }
 
 /* project CSS */
@@ -179,7 +179,7 @@ header h1 {
 }
 
 .right h4 {
-  padding: 20px;
+  padding: 15px;
   font-family: "Caveat", cursive;
   color: #303a43;
 

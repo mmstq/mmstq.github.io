@@ -3,7 +3,6 @@ function goTo(url) {
 }
 
 
-let right;
 window.onload = function () {
     document.getElementById('team').onclick = function () {
         goTo("https://stackoverflow.com/users/6439785/lekr0?tab=profile");
@@ -24,17 +23,12 @@ window.onload = function () {
 
 
 
+
 function myFunction(right) {
     var winScroll = right.scrollTop;
-    console.log("rightScrollTop: " + winScroll);
-
-
-
-    var height = right.scrollHeight;
-    console.log(right.scrollHeight);
-    var scrolled = (winScroll / height);
-    console.log(scrolled)
-    var percent = scrolled * 100;
+    var height = right.scrollHeight - right.clientHeight;
+    var scrolled = (winScroll / height) * 100;
     document.getElementById("myBar").style.height =
-        percent + "%";
+        scrolled + "%";
+
 }
