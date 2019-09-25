@@ -177,7 +177,7 @@ header h1 {
 .left {
   left: 0;
   background: #303a43;
-  width: 25%;
+  width: 15%;
 }
 
 .right h4 {
@@ -187,22 +187,51 @@ header h1 {
 
 }
 
-.progress-container {
-  height: 100%;
-  width: 8px;
-  background: #ccc;
+.index {
+  font-size: 2em;
+  left: 3.7px;
+  top: 10%;
+  height: 82%;
+  position: fixed;
+
 }
 
+.zero {
+  font-size: 50px;
+  color: white;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  z-index: 2;
+  position: fixed;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
+  border: 1.2px solid #d8d8d8;
+}
+
+.progress-container {
+  height: 100%;
+  position: fixed;
+  left: 15px;
+  width: 4px;
+  background: #414e58;
+}
+
+
+
 .progress-bar {
+  left: 15px;
   height: 0%;
   background: #4caf50;
-  width: 8px;
+  width: 4px;
+  position: fixed;
 }
 
 .right {
   right: 0;
   background: #ff9100;
-  width: 75%;
+  width: 85%;
 }
 
 
@@ -310,6 +339,8 @@ header #abouttext {
     color: #303a43;
   }
 
+  top: 15%;
+
   header .link {
     display: none;
   }
@@ -342,6 +373,7 @@ header #abouttext {
 
   .fa-rocket {
     padding-top: 8px;
+    top: 15%;
     padding-left: 4px;
     padding-right: 4px;
   }
@@ -382,5 +414,14 @@ header #abouttext {
     height: 100%;
     line-height: 100%;
     position: absolute;
+  }
+
+  /* Progress Bar */
+  .progress-container {
+    left: 7%;
+  }
+
+  .progress-bar {
+    left: 7%;
   }
 }
