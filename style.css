@@ -189,50 +189,68 @@ header h1 {
 }
 
 .index {
-  font-size: 2em;
-  left: 3.7px;
-  top: 10%;
+  left: 2.8px;
   height: 82%;
-  position: fixed;
+  position: absolute;
 
 }
 
-.zero h4 {
-  position: absolute;
+.green h4 {
+  color: #4caf50;
+  font-family: "Caveat"cursive;
   height: 24px;
   width: 24px;
+  margin: 0;
+  padding-top: 2.5px;
 }
 
-.zero {
-  font-size: 20px;
+
+.first {
+  top: 24%;
+  position: absolute;
+}
+
+.second {
+  top: 48%;
+  position: absolute;
+}
+
+.third {
+  top: 71%;
+  position: absolute;
+}
+
+.fourth {
+  top: 95%;
+  position: absolute;
+}
+
+.green {
+  margin-top: 0.56px;
+  font-size: 16px;
   color: white;
   width: 24px;
   height: 24px;
-  margin: 0;
-  z-index: 2;
-  position: absolute;
+  z-index: 1;
+  background: #303a43;
   -webkit-border-radius: 25px;
   -moz-border-radius: 25px;
   border-radius: 25px;
-  border: 3.3px solid #4caf50;
+  border: 1.9px solid #4caf50;
 }
 
 .progress-container {
   height: 100%;
   position: absolute;
-  left: 15px;
-  width: 4px;
+  left: 16px;
+  width: 2.0px;
   background: #414e58;
 }
 
-
-
 .progress-bar {
-  left: 15px;
   height: 0%;
-  position: absolute;
   background: #4caf50;
-  width: 4px;
+  width: 1.9px;
 }
 
 
@@ -424,11 +442,7 @@ header #abouttext {
 
   /* Progress Bar */
   .progress-container {
-    left: 7%;
+    left: 12px;
 
-  }
-
-  .progress-bar {
-    left: 7%;
   }
 }
