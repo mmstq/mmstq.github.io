@@ -202,7 +202,6 @@ header h1 {
   width: 24px;
   margin: 0;
   padding-top: 1.7px;
-  padding-right: 1.7px;
 }
 
 
@@ -227,7 +226,6 @@ header h1 {
 }
 
 .green {
-  margin-top: 0.56px;
   font-size: 16px;
   color: white;
   width: 24px;
@@ -237,7 +235,7 @@ header h1 {
   -webkit-border-radius: 25px;
   -moz-border-radius: 25px;
   border-radius: 25px;
-  border: 1.9px solid #4caf50;
+  border: 1.8px solid #4caf50;
 }
 
 .progress-container {
@@ -374,8 +372,9 @@ header #abouttext {
 
   #Current {
     color: #ff9100;
-    box-shadow: 2px 2px 3px #c5c5c5;
+    box-shadow: 1px 0px 5px #c5c5c5;
     border-color: #ff9100;
+
   }
 
   .fa-home {
@@ -407,17 +406,17 @@ header #abouttext {
     transition: 300ms;
     color: #ff9100;
     border-color: #ff9100;
-    box-shadow: 1px 1px 3px #e0e0e0;
+    box-shadow: 0px 0px 5px #e0e0e0;
   }
 
   header .link_small a {
-    margin-left: 3px;
+    margin-left: 5px;
     align-self: center;
 
   }
 
   header .link_small i {
-    box-shadow: 1px 1px 1px #e0e0e0;
+    box-shadow: 0px 1px 3px #e0e0e0;
 
     font-size: 18px;
     color: #555555;
