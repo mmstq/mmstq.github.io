@@ -197,11 +197,12 @@ header h1 {
 
 .green h4 {
   color: #4caf50;
-  font-family: "Caveat"cursive;
+  font-family: "Caveat", cursive;
   height: 24px;
   width: 24px;
   margin: 0;
-  padding-top: 2.5px;
+  padding-top: 1.7px;
+  padding-right: 1.7px;
 }
 
 
@@ -243,14 +244,14 @@ header h1 {
   height: 100%;
   position: absolute;
   left: 16px;
-  width: 2.0px;
+  width: 1.8px;
   background: #414e58;
 }
 
 .progress-bar {
   height: 0%;
   background: #4caf50;
-  width: 1.9px;
+  width: 1.8px;
 }
 
 
