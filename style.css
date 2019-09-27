@@ -442,7 +442,11 @@ header #abouttext {
 
   /* Progress Bar */
   .progress-container {
-    left: 12px;
+    left: 45%;
+  }
+
+  .index {
+    left: 23%;
 
   }
 }
