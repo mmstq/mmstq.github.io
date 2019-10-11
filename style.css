@@ -280,12 +280,15 @@ header #abouttext {
 .content-about .top {
   margin: auto;
   padding-top: 10px;
-  left: 0;
-  width: 100%;
+  padding-bottom: 10px;
+  width: 70%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  border-radius: 5px;
+  border-left: 18px solid #303a43;
+  box-shadow: 1px 1px 30px #d1d1d1;
 }
 
 .content-about #description h1 {
@@ -320,20 +323,23 @@ header #abouttext {
 }
 
 .middle {
-  /* max-height: 60%;
-  overflow: auto; */
   width: 70%;
   background: rgb(240, 240, 240);
+  margin-bottom: 30px;
+  margin-top: 20px;
   border-radius: 5px;
-  border-left: 18px solid #ff9100;
-  margin: auto;
-  box-shadow: 1px 1px 5px darkgray;
+  border-left: 18px solid #303a43;
+  box-shadow: 1px 1px 30px #d1d1d1;
 }
 
 .content-about {
   margin: auto;
-  padding: 10px;
-  overflow: auto;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   top: 10%;
   bottom: 8%;
   height: 82%;
@@ -489,6 +495,10 @@ header #abouttext {
   }
 
   .middle {
+    width: 80%;
+  }
+
+  .content-about .top {
     width: 80%;
   }
 
