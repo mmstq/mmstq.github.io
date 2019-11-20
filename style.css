@@ -109,7 +109,6 @@ header h1 {
   right: 0;
   height: 8%;
   display: flex;
-  z-index: 2;
   align-items: center;
   box-shadow: 1px 1px 7px #c4c4c4;
   justify-content: center;
@@ -183,7 +182,7 @@ header h1 {
 .right h4 {
   padding: 10px;
   height: 100%;
-  font-family: "Caveat", cursive;
+  font-family: "Dosis", sans-serif;
   color: #303a43;
 
 }
@@ -197,27 +196,29 @@ header h1 {
 
 .green h4 {
   color: #4caf50;
-  font-family: "Caveat", cursive;
-  height: 24px;
+  font-family: "Dosis", sans-serif;
+  height: 2px;
   width: 24px;
-  margin: 0;
-  padding-top: 1.7px;
+  margin-top: 1px;
 }
 
 
 .first {
   top: 24%;
   position: absolute;
+
 }
 
 .second {
   top: 48%;
   position: absolute;
+
 }
 
 .third {
   top: 71%;
   position: absolute;
+
 }
 
 .fourth {
@@ -231,11 +232,12 @@ header h1 {
   width: 24px;
   height: 24px;
   z-index: 1;
+  margin-top: 20px;
   background: #303a43;
-  -webkit-border-radius: 25px;
-  -moz-border-radius: 25px;
-  border-radius: 25px;
-  border: 1.8px solid #4caf50;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  border: 2px solid #4caf50;
 }
 
 .progress-container {
@@ -257,6 +259,35 @@ header h1 {
   right: 0;
   background: #ff9100;
   width: 85%;
+}
+
+.right h2{
+  font-family: 'Dosis', sans-serif;
+  font-weight: lighter;
+  margin: 0;
+  font-size: 1.2em;
+  margin-left: 10px;
+  line-height: 25px;
+}
+
+.right h1{
+  font-family: 'Dosis', sans-serif;
+  margin: 0;
+  font-weight: bold;
+}
+
+/*bb*/
+
+.bb img{
+  height: 350px;
+  margin: 20px;
+  border-radius: 3px;
+  box-shadow: 1px 1px 2px rgb(42, 42, 42);
+}
+
+.bb_img{
+  align-self: center;
+  margin: auto;
 }
 
 
@@ -324,9 +355,9 @@ header #abouttext {
 
 .middle {
   width: 70%;
-  background: rgb(240, 240, 240);
-  margin-bottom: 30px;
   margin-top: 20px;
+  margin-bottom: 30px;
+  background: rgb(240, 240, 240);
   border-radius: 5px;
   border-left: 18px solid #303a43;
   box-shadow: 1px 1px 30px #d1d1d1;
