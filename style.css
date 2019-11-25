@@ -280,6 +280,7 @@ header h1 {
 
 .bb img{
   height: 350px;
+  width: 180px;
   margin: 20px;
   border-radius: 3px;
   box-shadow: 1px 1px 2px rgb(42, 42, 42);
@@ -289,9 +290,6 @@ header h1 {
   align-self: center;
   margin: auto;
 }
-
-
-
 
 /* about CSS */
 
