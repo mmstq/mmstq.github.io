@@ -284,7 +284,7 @@ header h1 {
   margin-top: 20px;
   margin-left: 10px;
   border-radius: 3px;
-  box-shadow: 1px 1px 2px rgb(42, 42, 42);
+  box-shadow: 2px 2px 7px rgb(42, 42, 42);
 }
 
 .bb_img img{
@@ -292,7 +292,7 @@ header h1 {
   width: 185px;
   margin: 10px;
   border-radius: 3px;
-  box-shadow: 1px 1px 2px rgb(42, 42, 42);
+  box-shadow: 2px 2px 7px rgb(42, 42, 42);
 }
 
 .bb_img{
@@ -539,6 +539,18 @@ header #abouttext {
 
   .content-about .top {
     width: 80%;
+  }
+
+  /*project*/
+
+  .code_img img{
+    height: 255px;
+    width: 290px;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 3px;
+    box-shadow: 2px 2px 7px rgb(42, 42, 42);
   }
 
 }
