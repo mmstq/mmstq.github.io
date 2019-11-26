@@ -279,8 +279,8 @@ header h1 {
 /*bb*/
 
 .bb img{
-  height: 340px;
-  width: 190px;
+  height: 350px;
+  width: 185px;
   margin: 10px;
   border-radius: 3px;
   box-shadow: 1px 1px 2px rgb(42, 42, 42);
@@ -288,7 +288,7 @@ header h1 {
 
 .bb_img{
   align-self: center;
-  margin: auto;
+  margin-top: 20px;
 }
 
 /* about CSS */
