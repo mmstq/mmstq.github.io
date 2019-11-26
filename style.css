@@ -278,7 +278,16 @@ header h1 {
 
 /*bb*/
 
-.bb img{
+.code_img img{
+  height: 330px;
+  width: 390px;
+  margin-top: 20px;
+  margin-left: 10px;
+  border-radius: 3px;
+  box-shadow: 1px 1px 2px rgb(42, 42, 42);
+}
+
+.bb_img img{
   height: 350px;
   width: 185px;
   margin: 10px;
@@ -449,11 +458,11 @@ header #abouttext {
 
 
   .fa-user {
-    padding-top: 7px;
-    padding-bottom: 1px;
-    padding-left: 4px;
-    padding-right: 4px;
-    margin-right: 6px;
+        padding-top: 7px;
+        padding-bottom: 1px;
+        padding-left: 4px;
+        padding-right: 4px;
+        margin-right: 6px;
   }
 
   .fa-rocket {
@@ -517,6 +526,7 @@ header #abouttext {
     flex-direction: column;
 
   }
+
 
   .content-about #description {
     margin-left: 0;
