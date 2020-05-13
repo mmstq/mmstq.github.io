@@ -250,7 +250,7 @@ header h1 {
 
 .right {
   right: 0;
-  background: #ffffff;
+  background: whitesmoke;
   width: 100%;
 }
 
@@ -277,7 +277,7 @@ header h1 {
   margin-top: 20px;
   margin-left: 10px;
   border-radius: 3px;
-  box-shadow: 2px 2px 7px rgb(42, 42, 42);
+  box-shadow: 2px 2px 10px rgb(138, 138, 138);
 }
 
 .bb_img img{
@@ -286,7 +286,7 @@ header h1 {
   width: 150px;
   margin: 10px;
   border-radius: 3px;
-  box-shadow: 2px 2px 5px rgb(83, 83, 83);
+  box-shadow: 2px 2px 10px rgb(138, 138, 138);
 }
 
 .bb_img{
