@@ -173,12 +173,6 @@ header h1 {
   bottom: 10%;
 }
 
-.left {
-  left: 0;
-  background: #303a43;
-  width: 15%;
-}
-
 .right h4 {
   padding: 10px;
   height: 100%;
@@ -258,7 +252,7 @@ header h1 {
 .right {
   right: 0;
   background: #ff9100;
-  width: 85%;
+  width: 100%;
 }
 
 .right h2{
