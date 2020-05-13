@@ -100,7 +100,6 @@ header h1 {
   position: fixed;
 }
 
-
 .social_btn {
   background: white;
   position: fixed;
@@ -282,8 +281,9 @@ header h1 {
 }
 
 .bb_img img{
-  height: 350px;
-  width: 185px;
+  align-self: auto;
+  height: 330px;
+  width: 160px;
   margin: 10px;
   border-radius: 3px;
   box-shadow: 2px 2px 7px rgb(42, 42, 42);
