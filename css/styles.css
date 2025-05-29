@@ -2431,7 +2431,6 @@ td:last-child {
     color          : var(--color-text-dark);
     text-transform : uppercase;
     letter-spacing : .2em;
-    font-size      : var(--text-xs);
     line-height    : var(--vspace-0_75);
 }
 
