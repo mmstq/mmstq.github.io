@@ -3442,6 +3442,7 @@ img.u-pull-left {
 .about-expertise .skills-list li {
     display      : inline-block;
     padding-left : 0;
+    font-size: 4rem;
 }
 
 .about-expertise .skills-list li:not(:last-child)::after {
@@ -4236,4 +4237,32 @@ img.u-pull-left {
     .ss-go-top {
         right : 6vw;
     }
+}
+
+.skills-section {
+    margin-bottom: 25px;
+}
+
+.skills-section .skills-subtitle {
+    margin-bottom: 1px; /* Reduced from default spacing */
+}
+
+.skills-section .skills-list {
+    margin-top: 1px; /* Reduced from default spacing */
+}
+
+.contact-links a i {
+    margin-right: 0.5rem;
+    font-size: 2rem;
+    vertical-align: middle;
+}
+
+.contact-links a {
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.contact-links a:hover {
+    transform: translateX(5px);
 }
