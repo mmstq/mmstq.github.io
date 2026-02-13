@@ -1,0 +1,70 @@
+[
+    {
+        "id": "koor",
+        "title": "Koor",
+        "logo": "0.webp",
+        "description": "A property buying, selling, and renting platform for Gulf countries. Achieved 10K+ downloads within the first month without marketing spend. Built from scratch with multilingual localization, deep linking, and nearby property search. Published on both iOS and Play Store with 4.5+ rating.",
+        "tech": [
+            "Flutter",
+            "Firebase",
+            "Google Maps",
+            "Deep Linking",
+            "Localization",
+            "REST API"
+        ],
+        "link": "https://play.google.com/store/apps/details?id=com.ulearna.koor",
+        "screenshots": 6,
+        "screenshotExt": "webp"
+    },
+    {
+        "id": "movermate",
+        "title": "MoverMate",
+        "logo": "0.webp",
+        "description": "A high-performance logistics and moving app with advanced navigation, real-time tracking, and Stripe Tap-to-Pay for secure transactions. Features real-time messaging and calendar for scheduling moves. Delivers seamless cross-platform support for iOS and Android.",
+        "tech": [
+            "Flutter",
+            "Stripe",
+            "Google Maps",
+            "Real-Time",
+            "iOS",
+            "Android"
+        ],
+        "link": "https://play.google.com/store/apps/details?id=com.taskex.movermate",
+        "screenshots": 4,
+        "screenshotExt": "webp"
+    },
+    {
+        "id": "spotted",
+        "title": "Spotted",
+        "logo": "0.webp",
+        "description": "A social discovery platform connecting people through location-based interactions. Features real-time chat, user profiles, and interactive maps. Built with modern UI/UX principles for an engaging social experience.",
+        "tech": [
+            "Flutter",
+            "Supabase",
+            "Real-Time",
+            "Maps",
+            "Social",
+            "Chat"
+        ],
+        "link": "https://play.google.com/store/apps/details?id=com.spotted.app",
+        "screenshots": 5,
+        "screenshotExt": "png"
+    },
+    {
+        "id": "ssc_ai",
+        "title": "SSC Exam App",
+        "logo": "0.webp",
+        "description": "A comprehensive quiz app for SSC students with AI-powered explanations. Features Gemini API integration for generating brief solutions to every question. Includes AI chat for generating questions and curated notes based on topics. Previous year questions extracted using Local LLM with Phi-4 model.",
+        "tech": [
+            "Flutter",
+            "Gemini API",
+            "AI/ML",
+            "Firebase",
+            "LLM",
+            "Supabase"
+        ],
+        "link": "https://play.google.com/store/apps/details?id=com.mmstq.quiz.ssc_quiz",
+        "screenshots": 8,
+        "screenshotExt": "png"
+    }
+]
