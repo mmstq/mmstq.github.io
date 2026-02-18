@@ -1,5 +1,6 @@
-import React, { useState, useCallback, useEffect } from 'react';
+import React, { useState, useCallback, useEffect, useRef } from 'react';
 import projectsData from '../data/projects.json';
+import testamentsData from '../data/testaments.json';
 
 // Dynamically import all project images
 const importAll = (r) => {
@@ -46,6 +47,8 @@ const tagColors = [
 const Works = () => {
   const [imageIndices, setImageIndices] = useState({});
   const [zoomedProject, setZoomedProject] = useState(null);
+  const [activeTestimonial, setActiveTestimonial] = useState(0);
+  const testimonialTimerRef = useRef(null);
 
   // Initialize indices
   useEffect(() => {
@@ -54,50 +57,47 @@ const Works = () => {
     setImageIndices(initial);
   }, []);
 
+  const testimonials = testamentsData.recommendations.map((rec) => ({
+    name: rec.employer_name,
+    position: rec.company,
+    avatar: rec.image_url,
+    text: rec.text
+  }));
+
+  // Auto-advance testimonials
+  useEffect(() => {
+    testimonialTimerRef.current = setInterval(() => {
+      setActiveTestimonial((prev) => (prev + 1) % testimonials.length);
+    }, 5000);
+    return () => clearInterval(testimonialTimerRef.current);
+  }, [testimonials.length]);
+
+  const goToTestimonial = (idx) => {
+    setActiveTestimonial(idx);
+    clearInterval(testimonialTimerRef.current);
+    testimonialTimerRef.current = setInterval(() => {
+      setActiveTestimonial((prev) => (prev + 1) % testimonials.length);
+    }, 5000);
+  };
+
+  // Navigate one image at a time
   const nextImage = useCallback((projectId, totalImages) => {
     setImageIndices((prev) => ({
       ...prev,
-      [projectId]: prev[projectId] === totalImages - 1 ? 0 : (prev[projectId] || 0) + 1,
+      [projectId]: (prev[projectId] || 0) === totalImages - 1 ? 0 : (prev[projectId] || 0) + 1,
     }));
   }, []);
 
   const prevImage = useCallback((projectId, totalImages) => {
     setImageIndices((prev) => ({
       ...prev,
-      [projectId]: prev[projectId] === 0 ? totalImages - 1 : (prev[projectId] || 0) - 1,
+      [projectId]: (prev[projectId] || 0) === 0 ? totalImages - 1 : (prev[projectId] || 0) - 1,
     }));
   }, []);
 
   const toggleZoom = (projectId) => {
     setZoomedProject((prev) => (prev === projectId ? null : projectId));
   };
-
-  const testimonials = [
-    {
-      name: "Tim Cook",
-      position: "CEO, Apple",
-      avatar: `${process.env.PUBLIC_URL}/assets/images/avatars/user-02.jpg`,
-      text: "Molestiae incidunt consequatur quis ipsa autem nam sit enim magni. Voluptas tempore rem. Explicabo a quaerat sint autem dolore ducimus ut consequatur neque. Nisi dolores quaerat fuga rem nihil nostrum. Laudantium quia consequatur molestias delectus culpa."
-    },
-    {
-      name: "Sundar Pichai",
-      position: "CEO, Google",
-      avatar: `${process.env.PUBLIC_URL}/assets/images/avatars/user-03.jpg`,
-      text: "Excepturi nam cupiditate culpa doloremque deleniti repellat. Veniam quos repellat voluptas animi adipisci. Nisi eaque consequatur. Voluptatem dignissimos ut ducimus accusantium perspiciatis. Quasi voluptas eius distinctio. Atque eos maxime."
-    },
-    {
-      name: "Satya Nadella",
-      position: "CEO, Microsoft",
-      avatar: `${process.env.PUBLIC_URL}/assets/images/avatars/user-01.jpg`,
-      text: "Repellat dignissimos libero. Qui sed at corrupti expedita voluptas odit. Nihil ea quia nesciunt. Ducimus aut sed ipsam. Autem eaque officia cum exercitationem sunt voluptatum accusamus. Quasi voluptas eius distinctio. Voluptatem dignissimos ut."
-    },
-    {
-      name: "Jeff Bezos",
-      position: "CEO, Amazon",
-      avatar: `${process.env.PUBLIC_URL}/assets/images/avatars/user-06.jpg`,
-      text: "Nunc interdum lacus sit amet orci. Vestibulum dapibus nunc ac augue. Fusce vel dui. In ac felis quis tortor malesuada pretium. Curabitur vestibulum aliquam leo. Qui sed at corrupti expedita voluptas odit. Nihil ea quia nesciunt. Ducimus aut sed ipsam."
-    }
-  ];
 
   return (
     <section id="works" className="s-works target-section">
@@ -112,9 +112,12 @@ const Works = () => {
 
           <div className="project-grid">
             {projects.map((project) => {
-              const currentIndex = imageIndices[project.id] || 0;
-              const hasMultiple = project.images.length > 1;
+              const currentCenter = imageIndices[project.id] || 0;
+              const totalImages = project.images.length;
+              const hasMultipleImages = totalImages > 1;
               const isZoomed = zoomedProject === project.id;
+              // Each image = 33.333% width. Center currentCenter in the middle slot.
+              const translatePercent = (1 - currentCenter) * 33.333;
               return (
                 <div key={project.id} className="project-card" data-animate-el>
                   {/* Screenshot carousel area */}
@@ -123,21 +126,32 @@ const Works = () => {
                       className="project-card__image-wrapper"
                       onClick={() => toggleZoom(project.id)}
                     >
-                      {project.images.length > 0 && (
-                        <img
-                          src={project.images[currentIndex]}
-                          alt={`${project.title} screenshot ${currentIndex + 1}`}
-                          className={`project-card__screenshot ${isZoomed ? 'project-card__screenshot--zoomed' : ''}`}
-                        />
-                      )}
+                      <div
+                        className="project-card__slide-track"
+                        style={{ transform: `translateX(${translatePercent}%)` }}
+                      >
+                        {project.images.map((img, imgIdx) => {
+                          const posClass = imgIdx === currentCenter
+                            ? 'project-card__screenshot--center'
+                            : 'project-card__screenshot--side';
+                          return (
+                            <img
+                              key={imgIdx}
+                              src={img}
+                              alt={`${project.title} screenshot ${imgIdx + 1}`}
+                              className={`project-card__screenshot ${posClass} ${isZoomed ? 'project-card__screenshot--zoomed' : ''}`}
+                            />
+                          );
+                        })}
+                      </div>
                     </div>
 
                     {/* Round nav arrows */}
-                    {hasMultiple && (
+                    {hasMultipleImages && (
                       <>
                         <button
                           className="project-card__nav project-card__nav--prev"
-                          onClick={(e) => { e.stopPropagation(); prevImage(project.id, project.images.length); }}
+                          onClick={(e) => { e.stopPropagation(); prevImage(project.id, totalImages); }}
                           aria-label="Previous screenshot"
                         >
                           <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
@@ -146,7 +160,7 @@ const Works = () => {
                         </button>
                         <button
                           className="project-card__nav project-card__nav--next"
-                          onClick={(e) => { e.stopPropagation(); nextImage(project.id, project.images.length); }}
+                          onClick={(e) => { e.stopPropagation(); nextImage(project.id, totalImages); }}
                           aria-label="Next screenshot"
                         >
                           <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
@@ -157,17 +171,17 @@ const Works = () => {
                     )}
 
                     {/* Dot indicators */}
-                    {hasMultiple && (
+                    {hasMultipleImages && (
                       <div className="project-card__dots">
                         {project.images.map((_, idx) => (
                           <button
                             key={idx}
-                            className={`project-card__dot ${idx === currentIndex ? 'project-card__dot--active' : ''}`}
+                            className={`project-card__dot ${idx === currentCenter ? 'project-card__dot--active' : ''}`}
                             onClick={(e) => {
                               e.stopPropagation();
                               setImageIndices((prev) => ({ ...prev, [project.id]: idx }));
                             }}
-                            aria-label={`Go to screenshot ${idx + 1}`}
+                            aria-label={`Go to image ${idx + 1}`}
                           />
                         ))}
                       </div>
@@ -230,26 +244,67 @@ const Works = () => {
 
       <div className="row testimonials">
         <div className="column lg-12" data-animate-block>
-          <div className="swiper-container testimonial-slider" data-animate-el>
-            <div className="swiper-wrapper">
-              {testimonials.map((testimonial, index) => (
-                <div key={index} className="testimonial-slider__slide swiper-slide">
-                  <div className="testimonial-slider__author">
-                    <img
-                      src={testimonial.avatar}
-                      alt={testimonial.name}
-                      className="testimonial-slider__avatar"
-                    />
-                    <cite className="testimonial-slider__cite">
-                      <strong>{testimonial.name}</strong>
-                      <span>{testimonial.position}</span>
-                    </cite>
+          <h2 className="text-pretitle" data-animate-el>
+            Testimonials
+          </h2>
+          <div className="testimonial-carousel" data-animate-el>
+            <div className="testimonial-carousel__viewport">
+              <div
+                className="testimonial-carousel__track"
+                style={{ transform: `translateX(-${activeTestimonial * 100}%)` }}
+              >
+                {testimonials.map((testimonial, index) => (
+                  <div key={index} className="testimonial-carousel__slide">
+                    <div className="testimonial-carousel__content">
+                      <p className="testimonial-carousel__text">{testimonial.text}</p>
+                      <div className="testimonial-carousel__author">
+                        <img
+                          src={testimonial.avatar}
+                          alt={testimonial.name}
+                          className="testimonial-carousel__avatar"
+                        />
+                        <div className="testimonial-carousel__meta">
+                          <strong className="testimonial-carousel__name">{testimonial.name}</strong>
+                          <span className="testimonial-carousel__position">{testimonial.position}</span>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <p>{testimonial.text}</p>
-                </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Nav buttons */}
+            <button
+              className="testimonial-carousel__nav testimonial-carousel__nav--prev"
+              onClick={() => goToTestimonial(activeTestimonial === 0 ? testimonials.length - 1 : activeTestimonial - 1)}
+              aria-label="Previous testimonial"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </button>
+            <button
+              className="testimonial-carousel__nav testimonial-carousel__nav--next"
+              onClick={() => goToTestimonial((activeTestimonial + 1) % testimonials.length)}
+              aria-label="Next testimonial"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </button>
+
+            {/* Dot indicators */}
+            <div className="testimonial-carousel__dots">
+              {testimonials.map((_, idx) => (
+                <button
+                  key={idx}
+                  className={`testimonial-carousel__dot ${idx === activeTestimonial ? 'testimonial-carousel__dot--active' : ''}`}
+                  onClick={() => goToTestimonial(idx)}
+                  aria-label={`Go to testimonial ${idx + 1}`}
+                />
               ))}
             </div>
-            <div className="swiper-pagination"></div>
           </div>
         </div>
       </div>

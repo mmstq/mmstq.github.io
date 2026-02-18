@@ -150,6 +150,145 @@
 }
 
 /* ============================================================
+   TESTIMONIAL CAROUSEL
+   ============================================================ */
+
+.testimonial-carousel {
+    position: relative;
+    margin-top: 1.5rem;
+}
+
+.testimonial-carousel__viewport {
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+.testimonial-carousel__track {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.testimonial-carousel__slide {
+    min-width: 100%;
+    width: 100%;
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+
+.testimonial-carousel__content {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 3rem 3.5rem;
+    position: relative;
+}
+
+.testimonial-carousel__text {
+    font-size: 1.8rem !important;
+    line-height: 1.6 !important;
+    color: rgba(255, 255, 255, 0.8) !important;
+    margin: 0 0 2rem 0 !important;
+    font-style: italic;
+    white-space: normal !important;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.testimonial-carousel__author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.testimonial-carousel__avatar {
+    width: 48px !important;
+    height: 48px !important;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(129, 140, 248, 0.3);
+}
+
+.testimonial-carousel__meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.testimonial-carousel__name {
+    font-size: 1.6rem !important;
+    font-weight: 700 !important;
+    color: white !important;
+}
+
+.testimonial-carousel__position {
+    font-size: 1.3rem !important;
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Nav buttons */
+.testimonial-carousel__nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    color: white !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    z-index: 3;
+}
+
+.testimonial-carousel__nav:hover {
+    background: rgba(0, 0, 0, 0.7);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.testimonial-carousel__nav--prev {
+    left: -20px;
+}
+
+.testimonial-carousel__nav--next {
+    right: -20px;
+}
+
+/* Dot indicators */
+.testimonial-carousel__dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 1.5rem;
+}
+
+.testimonial-carousel__dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.25);
+    cursor: pointer;
+    padding: 0;
+    transition: all 0.3s ease;
+}
+
+.testimonial-carousel__dot:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.testimonial-carousel__dot--active {
+    background: var(--color-1, #818cf8);
+    transform: scale(1.4);
+    box-shadow: 0 0 8px rgba(129, 140, 248, 0.5);
+}
+
+/* ============================================================
    PROJECT CARD GRID
    ============================================================ */
 
@@ -183,7 +322,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    aspect-ratio: 9 / 14;
+    aspect-ratio: 9 / 7;
     overflow: hidden;
     cursor: pointer;
     transition: aspect-ratio 0.4s ease;
@@ -191,7 +330,7 @@
 
 /* Zoomed state: expand the gallery */
 .project-card__gallery--zoomed {
-    aspect-ratio: 9 / 18;
+    aspect-ratio: 9 / 9;
 }
 
 .project-card__image-wrapper {
@@ -200,15 +339,38 @@
     justify-content: center;
     width: 100%;
     height: 100%;
-    padding: 0.75rem;
+    overflow: hidden;
 }
 
 .project-card__screenshot {
-    max-height: 100% !important;
-    max-width: 100% !important;
+    min-width: 33.333%;
+    width: 33.333%;
+    height: 100%;
     object-fit: contain;
-    border-radius: 10px;
-    transition: transform 0.4s ease;
+    border-radius: 14px;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    box-sizing: border-box;
+    padding: 0 0.25rem;
+}
+
+/* Carousel position variants */
+.project-card__screenshot--center {
+    transform: scale(1.05);
+    z-index: 2;
+    opacity: 1;
+}
+
+.project-card__screenshot--side {
+    transform: scale(0.85);
+    opacity: 0.6;
+}
+
+/* Slide track for carousel */
+.project-card__slide-track {
+    display: flex;
+    align-items: center;
+    transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+    height: 100%;
 }
 
 /* Zoomed screenshot */
@@ -342,34 +504,35 @@
     transform: scale(1.15);
 }
 
-/* Description — smaller */
+/* Description */
 .project-card__desc {
-    font-size: 0.8rem !important;
-    line-height: 1.55 !important;
-    color: rgba(255, 255, 255, 0.55) !important;
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+    color: rgba(255, 255, 255, 0.6) !important;
     margin: 0 !important;
     display: -webkit-box;
     -webkit-line-clamp: 3;
+    line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
 
-/* Tech tags — more compact */
+/* Tech tags */
 .project-card__tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 5px;
-    margin-top: 0.15rem;
+    gap: 6px;
+    margin-top: 0.25rem;
 }
 
 .project-card__tag {
-    padding: 2px 8px;
-    border-radius: 4px;
-    font-size: 0.68rem !important;
+    padding: 3px 10px;
+    border-radius: 5px;
+    font-size: 0.82rem !important;
     font-weight: 500;
     letter-spacing: 0.01em;
     white-space: nowrap;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 /* ============================================================
@@ -402,12 +565,28 @@
     }
 
     .project-card__desc {
-        font-size: 0.75rem !important;
+        font-size: 0.9rem !important;
     }
 
     .project-card__tag {
-        font-size: 0.62rem !important;
-        padding: 2px 6px;
+        font-size: 0.75rem !important;
+        padding: 2px 8px;
+    }
+
+    .testimonial-carousel__content {
+        padding: 1.5rem 1.25rem;
+    }
+
+    .testimonial-carousel__text {
+        font-size: 1.4rem !important;
+    }
+
+    .testimonial-carousel__nav--prev {
+        left: 4px;
+    }
+
+    .testimonial-carousel__nav--next {
+        right: 4px;
     }
 }
 
