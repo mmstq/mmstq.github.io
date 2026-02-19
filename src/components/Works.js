@@ -53,7 +53,10 @@ const Works = () => {
   // Initialize indices
   useEffect(() => {
     const initial = {};
-    projects.forEach((p) => { initial[p.id] = 0; });
+    projects.forEach((p) => {
+      // Start at index 1 so there's an image on the left and right (if enough images)
+      initial[p.id] = p.images.length > 1 ? 1 : 0;
+    });
     setImageIndices(initial);
   }, []);
 

@@ -3,7 +3,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faSwift, faAndroid, faPhp, faPython, faApple, faStripe,
   faLaravel, faGooglePlay, faAppStoreIos, faDocker, faGitAlt,
-  faLinux, faAws
+  faLinux, faAws,
+  faJs,
+  faFlutter,
+  faDartLang,
+  faJava,
+  faReact,
+  faGithub
 } from '@fortawesome/free-brands-svg-icons';
 import {
   faDatabase, faMobileAlt, faFire, faServer, faCode, faSync,
@@ -12,37 +18,32 @@ import {
 
 const About = () => {
   const languageSkills = [
-    { icon: 'https://img.icons8.com/?size=100&id=7AFcZ2zirX6Y&format=png&color=000000', color: '#00B4AB', name: 'Dart' },
-    { icon: 'https://img.icons8.com/?size=100&id=108784&format=png&color=000000', color: '#cfef2eff', name: 'JavaScript' },
+    { icon: faDartLang, color: '#00B4AB', name: 'Dart' },
+    { icon: faJs, color: '#cfef2eff', name: 'JavaScript' },
     { icon: faSwift, color: '#F05138', name: 'Swift' },
-    { icon: faAndroid, color: '#3DDC84', name: 'Kotlin' },
     { icon: faPhp, color: '#777BB4', name: 'PHP' },
-    { icon: faPython, color: '#3776AB', name: 'Python' },
-    { icon: faDatabase, color: '#336791', name: 'SQL' }
+    { icon: faJava, color: '#777BB4', name: 'PHP' },
+    { icon: faPython, color: '#3776AB', name: 'Python' }
   ];
 
   const frameworkSkills = [
-    { icon: faMobileAlt, color: '#02569B', name: 'Flutter' },
-    { icon: faApple, color: '#000000', name: 'iOS' },
+    { icon: faFlutter, color: '#0854f7ff', name: 'Flutter' },
+    { icon: faApple, color: '#ffffffff', name: 'iOS' },
     { icon: faAndroid, color: '#3DDC84', name: 'Android' },
     { icon: faStripe, color: '#008CDD', name: 'Stripe' },
-    { icon: faFire, color: '#FFCA28', name: 'Firebase' },
-    { icon: faServer, color: '#3ECF8E', name: 'Supabase' },
+    { icon: faReact, color: '#FFCA28', name: 'Firebase' },
     { icon: faLaravel, color: '#FF2D20', name: 'Laravel' },
     { icon: faDatabase, color: '#336791', name: 'PostgreSQL' }
   ];
 
   const otherSkills = [
-    { icon: faCode, color: '#61DAFB', name: 'REST API' },
-    { icon: faSync, color: '#2496ED', name: 'CI/CD' },
-    { icon: faGooglePlay, color: '#414141', name: 'Play Store' },
+    { icon: faGithub, color: '#61DAFB', name: 'REST API' },
+    { icon: faGooglePlay, color: '#4d6bd7ff', name: 'Play Store' },
     { icon: faAppStoreIos, color: '#0D96F6', name: 'iOS Store' },
     { icon: faDocker, color: '#2496ED', name: 'Docker' },
     { icon: faGitAlt, color: '#F05032', name: 'Git' },
     { icon: faLinux, color: '#FCC624', name: 'Linux' },
     { icon: faAws, color: '#FF9900', name: 'AWS' },
-    { icon: faCodeBranch, color: '#2496ED', name: 'CI/CD' },
-    { icon: faCreditCard, color: '#00B4AB', name: 'Payment Integration' }
   ];
 
   return (
@@ -63,7 +64,7 @@ const About = () => {
               About
             </h2>
             <p className="attention-getter" data-animate-el>
-              I build reliable apps that solve real problems—streamlining ops, enhancing UX, and driving growth. From idea to launch, I deliver value teams can trust.
+              I build reliable solutions that solve real problems and drive growth. From idea to launch, I can deliver end-to-end.
             </p>
             <a
               href="https://docs.google.com/document/d/1qAU7TlKWQGD051blv1xFioC74BDI8PLNcO1wsJZJrXE/edit?tab=t.0"

@@ -6,11 +6,14 @@ import Works from './components/Works';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Preloader from './components/Preloader';
+import ThemeToggle from './components/ThemeToggle';
+import { ThemeProvider } from './context/ThemeContext';
 
 // Import styles in correct order
 import './styles/css/vendor.css';
 import './styles/css/styles.css';
 import './styles/react-additions.css';
+import './styles/toggle.css';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -26,29 +29,27 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      {isLoading && <Preloader />}
-      <div className="s-pagewrap">
-        <div className="circles">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
+    <ThemeProvider>
+      <div className="App">
+        {isLoading && <Preloader />}
+        <ThemeToggle />
+        <div className="s-pagewrap">
+          <div className="circles">
+          </div>
+
+          <Header />
+
+          <main className="s-content">
+            <Intro />
+            <About />
+            <Works />
+            <Contact />
+          </main>
+
+          <Footer />
         </div>
-        
-        <Header />
-        
-        <main className="s-content">
-          <Intro />
-          <About />
-          <Works />
-          <Contact />
-        </main>
-        
-        <Footer />
       </div>
-    </div>
+    </ThemeProvider>
   );
 }
 
