@@ -1,4 +1,3 @@
-import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faSwift, faAndroid, faPhp, faPython, faApple, faStripe,
@@ -12,8 +11,7 @@ import {
   faGithub
 } from '@fortawesome/free-brands-svg-icons';
 import {
-  faDatabase, faMobileAlt, faFire, faServer, faCode, faSync,
-  faCodeBranch, faCreditCard
+  faDatabase
 } from '@fortawesome/free-solid-svg-icons';
 
 const About = () => {
