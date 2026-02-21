@@ -27,7 +27,7 @@ const Intro = () => {
 
         <ul className="intro-social">
           <li>
-            <a href="https://linkedin.com/in/mohd-mustak-2b4100187" target="_blank" rel="noopener noreferrer">
+            <a href="https://linkedin.com/in/mohdmustak/" target="_blank" rel="noopener noreferrer">
               Linkedin
             </a>
           </li>

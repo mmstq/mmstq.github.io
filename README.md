@@ -185,7 +185,7 @@ This project is open source and available under the [MIT License](LICENSE).
 ## 👨‍💻 Author
 
 **Mohd Mustak**
-- LinkedIn: [mohd-mustak-2b4100187](https://linkedin.com/in/mohd-mustak-2b4100187)
+- LinkedIn: [mohd-mustak-2b4100187](https://linkedin.com/in/mohdmustak)
 - GitHub: [mmstq](https://github.com/mmstq)
 - Email: mohdmushtak59@gmail.com
 

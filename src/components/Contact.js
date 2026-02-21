@@ -38,7 +38,7 @@ const Contact = () => {
           <h3 className="text-pretitle">Social</h3>
           <ul className="contact-social">
             <li>
-              <a href="https://linkedin.com/in/mohd-mustak-2b4100187" target="_blank" rel="noopener noreferrer">
+              <a href="https://linkedin.com/in/mohdmustak" target="_blank" rel="noopener noreferrer">
                 <FontAwesomeIcon icon={faLinkedin} style={{ color: '#0077B5', marginRight: '0.5rem', fontSize: '2rem', verticalAlign: 'middle' }} />
                 LinkedIn
               </a>
