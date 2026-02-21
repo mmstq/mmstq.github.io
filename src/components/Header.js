@@ -62,8 +62,9 @@ const Header = () => {
           className={`mobile-menu-toggle ${isMenuOpen ? 'is-clicked' : ''}`}
           href="#0"
           onClick={(e) => { e.preventDefault(); toggleMenu(); }}
+          aria-label="Toggle Menu"
         >
-          <span>Menu</span>
+          <span></span>
         </a>
       </div>
 

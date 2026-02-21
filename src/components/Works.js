@@ -15,6 +15,10 @@ const allImages = importAll(
   require.context('../assets/project_images', true, /\.(png|jpe?g|webp|svg)$/)
 );
 
+const employerImages = importAll(
+  require.context('../assets/employer_photos', false, /\.(png|jpe?g|webp|svg)$/)
+);
+
 // Helper to get image path from the imported context
 const getImage = (projectId, filename) => {
   const key = `${projectId}/${filename}`;
@@ -48,6 +52,7 @@ const Works = () => {
   const [imageIndices, setImageIndices] = useState({});
   const [zoomedProject, setZoomedProject] = useState(null);
   const [activeTestimonial, setActiveTestimonial] = useState(0);
+  const [touchStartX, setTouchStartX] = useState(null);
   const testimonialTimerRef = useRef(null);
 
   // Initialize indices
@@ -60,12 +65,21 @@ const Works = () => {
     setImageIndices(initial);
   }, []);
 
-  const testimonials = testamentsData.recommendations.map((rec) => ({
-    name: rec.employer_name,
-    position: rec.company,
-    avatar: rec.image_url,
-    text: rec.text
-  }));
+  const testimonials = testamentsData.recommendations.map((rec) => {
+    let avatarSrc = rec.image_url;
+    if (avatarSrc && avatarSrc.includes('/')) {
+      const filename = avatarSrc.split('/').pop();
+      if (employerImages[filename]) {
+        avatarSrc = employerImages[filename];
+      }
+    }
+    return {
+      name: rec.employer_name,
+      position: rec.company,
+      avatar: avatarSrc,
+      text: rec.text
+    };
+  });
 
   // Auto-advance testimonials
   useEffect(() => {
@@ -100,6 +114,23 @@ const Works = () => {
 
   const toggleZoom = (projectId) => {
     setZoomedProject((prev) => (prev === projectId ? null : projectId));
+  };
+
+  const handleTouchStart = (e) => {
+    setTouchStartX(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = (e) => {
+    if (touchStartX === null) return;
+    const currentX = e.changedTouches[0].clientX;
+    const diff = touchStartX - currentX;
+
+    if (diff > 50) {
+      goToTestimonial((activeTestimonial + 1) % testimonials.length);
+    } else if (diff < -50) {
+      goToTestimonial(activeTestimonial === 0 ? testimonials.length - 1 : activeTestimonial - 1);
+    }
+    setTouchStartX(null);
   };
 
   return (
@@ -173,22 +204,6 @@ const Works = () => {
                       </>
                     )}
 
-                    {/* Dot indicators */}
-                    {hasMultipleImages && (
-                      <div className="project-card__dots">
-                        {project.images.map((_, idx) => (
-                          <button
-                            key={idx}
-                            className={`project-card__dot ${idx === currentCenter ? 'project-card__dot--active' : ''}`}
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              setImageIndices((prev) => ({ ...prev, [project.id]: idx }));
-                            }}
-                            aria-label={`Go to image ${idx + 1}`}
-                          />
-                        ))}
-                      </div>
-                    )}
                   </div>
 
                   {/* Project info */}
@@ -251,7 +266,11 @@ const Works = () => {
             Testimonials
           </h2>
           <div className="testimonial-carousel" data-animate-el>
-            <div className="testimonial-carousel__viewport">
+            <div
+              className="testimonial-carousel__viewport"
+              onTouchStart={handleTouchStart}
+              onTouchEnd={handleTouchEnd}
+            >
               <div
                 className="testimonial-carousel__track"
                 style={{ transform: `translateX(-${activeTestimonial * 100}%)` }}

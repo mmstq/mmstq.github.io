@@ -24,7 +24,7 @@
 @media screen and (max-width: 768px) {
     .theme-toggle {
         top: 1.5rem;
-        right: 5rem;
+        right: 7rem;
         /* Give space for mobile menu toggle */
     }
 }

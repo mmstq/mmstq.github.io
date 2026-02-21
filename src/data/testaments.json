@@ -4,25 +4,25 @@
             "employer_name": "Rahmatullah Nowruz",
             "company": "Ulearna Tech",
             "text": "Mohd brilliantly built our Gulf property platform from scratch, achieving 10K+ downloads in month one without any marketing. His offline features were a game-changer. Just like his passion for distance running, he brings unmatched endurance and drive to every project.",
-            "image_url": "https://ui-avatars.com/api/?name=Rahmatullah+Nowruz&background=random&size=256"
+            "image_url": "src/assets/employer_photos/rahmat.png"
         },
         {
             "employer_name": "Rishabh Gupta",
             "company": "SwiftAMS",
             "text": "Mohd is a standout engineer who successfully led the delivery of three mobile apps for us. He went beyond frontend tasks, setting up Flutter CI/CD pipelines and managing our server infrastructure. His natural passion for gadgets and tech makes him an invaluable innovator.",
-            "image_url": "https://ui-avatars.com/api/?name=Rishabh+Gupta&background=random&size=256"
+            "image_url": "src/assets/employer_photos/rishabh.png"
         },
         {
-            "employer_name": "Harpreet Singh",
+            "employer_name": "Harpratap Singh",
             "company": "TaskEx",
             "text": "Mohd modernized our logistics operations by building a high-performance cross-platform Flutter app. He flawlessly integrated complex features like real-time tracking and Stripe Tap-to-Pay. His fast-paced startup experience makes him an exceptionally reliable and efficient developer.",
-            "image_url": "https://ui-avatars.com/api/?name=Harpreet+Singh&background=random&size=256"
+            "image_url": "src/assets/employer_photos/harpratap.png"
         },
         {
             "employer_name": "Yash Binani",
             "company": "Yasita Creations",
             "text": "Mohd digitized our manual workflows, boosting our operational efficiency by an impressive 40-45%. He built highly secure features, including banking-app-style session timeouts and handled our database migration to Supabase. He is a brilliant developer who deeply understands business processes.",
-            "image_url": "https://ui-avatars.com/api/?name=Yash+Binani&background=random&size=256"
+            "image_url": "src/assets/employer_photos/yash.png"
         }
     ]
 }

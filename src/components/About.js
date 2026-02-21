@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faSwift, faAndroid, faPhp, faPython, faApple, faStripe,
-  faLaravel, faGooglePlay, faAppStoreIos, faDocker, faGitAlt,
+  faLaravel, faGooglePlay, faAppStoreIos, faDocker,
   faLinux, faAws,
   faJs,
   faFlutter,
@@ -16,16 +16,16 @@ import {
 
 const About = () => {
   const languageSkills = [
-    { icon: faDartLang, color: '#00B4AB', name: 'Dart' },
+    { icon: faDartLang, color: '#2899e4ff', name: 'Dart' },
     { icon: faJs, color: '#cfef2eff', name: 'JavaScript' },
     { icon: faSwift, color: '#F05138', name: 'Swift' },
-    { icon: faPhp, color: '#777BB4', name: 'PHP' },
-    { icon: faJava, color: '#777BB4', name: 'PHP' },
+    { icon: faPhp, color: '#ffffffff', name: 'PHP' },
+    { icon: faJava, color: '#df8c27ff', name: 'PHP' },
     { icon: faPython, color: '#3776AB', name: 'Python' }
   ];
 
   const frameworkSkills = [
-    { icon: faFlutter, color: '#0854f7ff', name: 'Flutter' },
+    { icon: faFlutter, color: '#2899e4ff', name: 'Flutter' },
     { icon: faApple, color: '#ffffffff', name: 'iOS' },
     { icon: faAndroid, color: '#3DDC84', name: 'Android' },
     { icon: faStripe, color: '#008CDD', name: 'Stripe' },
@@ -35,13 +35,13 @@ const About = () => {
   ];
 
   const otherSkills = [
-    { icon: faGithub, color: '#61DAFB', name: 'REST API' },
-    { icon: faGooglePlay, color: '#4d6bd7ff', name: 'Play Store' },
+    { icon: faGooglePlay, color: '#2899e4ff', name: 'Play Store' },
+    { icon: faGithub, color: '#ffffffff', name: 'REST API' },
     { icon: faAppStoreIos, color: '#0D96F6', name: 'iOS Store' },
-    { icon: faDocker, color: '#2496ED', name: 'Docker' },
-    { icon: faGitAlt, color: '#F05032', name: 'Git' },
     { icon: faLinux, color: '#FCC624', name: 'Linux' },
+    { icon: faDocker, color: 'hsla(210, 92%, 58%, 1.00)', name: 'Docker' },
     { icon: faAws, color: '#FF9900', name: 'AWS' },
+
   ];
 
   return (
