@@ -49,8 +49,8 @@ const Intro = () => {
         </ul>
       </div>
 
-      <a 
-        href="#about" 
+      <a
+        href="#about"
         className="intro-scrolldown smoothscroll"
         onClick={(e) => { e.preventDefault(); scrollToSection('about'); }}
       >

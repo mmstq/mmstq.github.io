@@ -186,6 +186,7 @@ const Works = () => {
                         <button
                           className="project-card__nav project-card__nav--prev"
                           onClick={(e) => { e.stopPropagation(); prevImage(project.id, totalImages); }}
+                          onTouchEnd={(e) => { e.preventDefault(); e.stopPropagation(); prevImage(project.id, totalImages); }}
                           aria-label="Previous screenshot"
                         >
                           <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
@@ -195,6 +196,7 @@ const Works = () => {
                         <button
                           className="project-card__nav project-card__nav--next"
                           onClick={(e) => { e.stopPropagation(); nextImage(project.id, totalImages); }}
+                          onTouchEnd={(e) => { e.preventDefault(); e.stopPropagation(); nextImage(project.id, totalImages); }}
                           aria-label="Next screenshot"
                         >
                           <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
@@ -296,26 +298,7 @@ const Works = () => {
               </div>
             </div>
 
-            {/* Nav buttons */}
-            <button
-              className="testimonial-carousel__nav testimonial-carousel__nav--prev"
-              onClick={() => goToTestimonial(activeTestimonial === 0 ? testimonials.length - 1 : activeTestimonial - 1)}
-              aria-label="Previous testimonial"
-            >
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </button>
-            <button
-              className="testimonial-carousel__nav testimonial-carousel__nav--next"
-              onClick={() => goToTestimonial((activeTestimonial + 1) % testimonials.length)}
-              aria-label="Next testimonial"
-            >
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </button>
-
+            {/* Nav buttons removed */}
             {/* Dot indicators */}
             <div className="testimonial-carousel__dots">
               {testimonials.map((_, idx) => (

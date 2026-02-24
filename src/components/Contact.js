@@ -25,12 +25,10 @@ const Contact = () => {
           <h3 className="text-pretitle">Reach me at</h3>
           <p className="contact-links">
             <a href="mailto:mohdmushtak59@gmail.com" className="mailtoui">
-              <FontAwesomeIcon icon={faGoogle} style={{ color: '#DB4437' }} />
-              Mail
-            </a> <br />
+              <FontAwesomeIcon icon={faGoogle} style={{ color: '#DB4437', fontSize: '2.5rem', marginRight: '1rem' }} />
+            </a>
             <a href="https://wa.me/917011152375" target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faWhatsapp} style={{ color: '#25D366' }} />
-              WhatsApp
+              <FontAwesomeIcon icon={faWhatsapp} style={{ color: '#25D366', fontSize: '2.5rem' }} />
             </a>
           </p>
         </div>
@@ -39,26 +37,22 @@ const Contact = () => {
           <ul className="contact-social">
             <li>
               <a href="https://linkedin.com/in/mohdmustak" target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon icon={faLinkedin} style={{ color: '#0077B5', marginRight: '0.5rem', fontSize: '2rem', verticalAlign: 'middle' }} />
-                LinkedIn
+                <FontAwesomeIcon icon={faLinkedin} style={{ color: '#0077B5', fontSize: '2.5rem', verticalAlign: 'middle' }} />
               </a>
             </li>
             <li>
               <a href="https://github.com/mmstq" target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon icon={faGithub} style={{ color: 'var(--color-text-dark)', marginRight: '0.5rem', fontSize: '2rem', verticalAlign: 'middle' }} />
-                Github
+                <FontAwesomeIcon icon={faGithub} style={{ color: 'var(--color-text-dark)', fontSize: '2.5rem', verticalAlign: 'middle' }} />
               </a>
             </li>
             <li>
               <a href="https://play.google.com/store/apps/developer?id=mmstq" target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon icon={faGooglePlay} style={{ color: '#2899e4ff', marginRight: '0.5rem', fontSize: '2rem', verticalAlign: 'middle' }} />
-                Play Store
+                <FontAwesomeIcon icon={faGooglePlay} style={{ color: '#2899e4ff', fontSize: '2.5rem', verticalAlign: 'middle' }} />
               </a>
             </li>
             <li>
               <a href="https://linktr.ee/mmstq" target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon icon={faLink} style={{ color: '#43E660', marginRight: '0.5rem', fontSize: '2rem', verticalAlign: 'middle' }} />
-                Linktree
+                <FontAwesomeIcon icon={faLink} style={{ color: '#43E660', fontSize: '2.5rem', verticalAlign: 'middle' }} />
               </a>
             </li>
           </ul>
