@@ -18,10 +18,9 @@ const Intro = () => {
 
           <h1 className="text-huge-title">
             I am Mohd Mustak, <br />
-            a Flutter Engineer <br />
-            & Full Stack<br />
-            Developer based <br />
-            in India.
+            a Senior Full Stack <br />
+            Flutter Engineer <br />
+            based in India.
           </h1>
         </div>
 

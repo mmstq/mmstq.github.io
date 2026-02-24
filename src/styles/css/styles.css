@@ -1975,13 +1975,13 @@ a:hover {
     min-height: calc(25.5 * var(--space));
     justify-content: center;
     align-items: center;
-    padding-top: calc(16vh + var(--header-height));
+    padding-top: calc(8vh + var(--header-height));
     padding-bottom: var(--vspace-3);
 }
 
 .text-huge-title {
-    font-size: 8.8rem;
-    line-height: 1.074;
+    font-size: 8rem;
+    line-height: 1.1;
     margin: 0;
 }
 
@@ -2024,7 +2024,7 @@ a:hover {
     transform: rotate(-90deg) translateX(-50%);
     transform-origin: left bottom;
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: calc(100% - 6rem);
 }
 
