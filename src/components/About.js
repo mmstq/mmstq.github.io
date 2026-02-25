@@ -141,7 +141,7 @@ const About = () => {
               <div className="timeline__bullet"></div>
               <div className="timeline__header">
                 <h4 className="timeline__title">Ulearna Tech (Dubai, UAE - Remote)</h4>
-                <h5 className="timeline__meta">Senior Software Engineer (Flutter)</h5>
+                <h5 className="timeline__meta">Sr. Software Engineer (Flutter)</h5>
                 <p className="timeline__timeframe">November 2024 - Present</p>
               </div>
               <div className="timeline__desc">
@@ -156,7 +156,7 @@ const About = () => {
               <div className="timeline__bullet"></div>
               <div className="timeline__header">
                 <h4 className="timeline__title">SwiftAMS (Gurugram)</h4>
-                <h5 className="timeline__meta">Senior Software Engineer (Flutter)</h5>
+                <h5 className="timeline__meta">Sr. Software Engineer (Flutter)</h5>
                 <p className="timeline__timeframe">August 2023 - October 2024</p>
               </div>
               <div className="timeline__desc">
