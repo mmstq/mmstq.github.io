@@ -12,7 +12,6 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import {
   faDatabase,
-  faNetworkWired,
   faPlug
 } from '@fortawesome/free-solid-svg-icons';
 
