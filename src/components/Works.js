@@ -257,17 +257,19 @@ const Works = () => {
                       </div>
 
                       <div style={{ marginBottom: "1rem" }}>
-                        <p className={`project-card__desc ${isDescExpanded ? 'project-card__desc--expanded' : ''}`}>
-                          {project.description}
+                        <p className="project-card__desc">
+                          {isDescExpanded || !project.description || project.description.length <= 120
+                            ? project.description
+                            : `${project.description.substring(0, 120)}...`}
+                          {project.description && project.description.length > 120 && (
+                            <button
+                              className="project-card__desc-btn"
+                              onClick={(e) => { e.stopPropagation(); toggleDesc(project.id); }}
+                            >
+                              {isDescExpanded ? 'View less' : 'Read more'}
+                            </button>
+                          )}
                         </p>
-                        {project.description && project.description.length > 100 && (
-                          <button
-                            className="project-card__desc-btn"
-                            onClick={(e) => { e.stopPropagation(); toggleDesc(project.id); }}
-                          >
-                            {isDescExpanded ? 'View less' : 'Read more'}
-                          </button>
-                        )}
                       </div>
 
                       <div className="project-card__tags">

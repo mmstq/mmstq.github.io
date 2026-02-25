@@ -3,25 +3,25 @@
         {
             "employer_name": "Rahmatullah Nowruz",
             "company": "Ulearna Tech",
-            "text": "Mohd brilliantly built our Gulf property platform from scratch, achieving 10K+ downloads in month one without any marketing. His offline features were a game-changer. Just like his passion for distance running, he brings unmatched endurance and drive to every project.",
+            "text": "Mohd brilliantly built 2 apps, Marhaba Auctions and Gulf Property platform from scratch, achieving 10K+ downloads in month one without any marketing. His offline features were a game-changer. I really don't know he can he build so fast and so well. App he built are fast, smooth, bug free and are less size as compared to our other apps. He is a gem of a person and a great developer.",
             "image_url": "src/assets/employer_photos/rahmat.png"
         },
         {
             "employer_name": "Rishabh Gupta",
             "company": "SwiftAMS",
-            "text": "Mohd is a standout engineer who successfully led the delivery of three mobile apps for us. He went beyond frontend tasks, setting up Flutter CI/CD pipelines and managing our server infrastructure. His natural passion for gadgets and tech makes him an invaluable innovator.",
+            "text": "Mohd is a standout engineer who successfully led the delivery of three mobile apps for us. Due to fund crunch, we had to reduce the team from 14 people run the company with 3 people including Mohd. His transition from frontend to backend was seamless and he quickly became a valuable asset to our team. He is a quick learner and can pick up new technologies very quickly. One of my best hires.",
             "image_url": "src/assets/employer_photos/rishabh.png"
         },
         {
             "employer_name": "Harpratap Singh",
             "company": "TaskEx",
-            "text": "Mohd modernized our logistics operations by building a high-performance cross-platform Flutter app. He flawlessly integrated complex features like real-time tracking and Stripe Tap-to-Pay. His fast-paced startup experience makes him an exceptionally reliable and efficient developer.",
+            "text": "Mohd modernized our logistics operations by building a high-performance cross-platform Flutter app. He flawlessly integrated complex features like real-time tracking and Stripe Tap-to-Pay, Digital wallet and job scheduling feature. His fast-paced startup experience makes him an exceptionally reliable and efficient developer.",
             "image_url": "src/assets/employer_photos/harpratap.png"
         },
         {
             "employer_name": "Yash Binani",
             "company": "Yasita Creations",
-            "text": "Mohd digitized our manual workflows, boosting our operational efficiency by an impressive 40-45%. He built highly secure features, including banking-app-style session timeouts and handled our database migration to Supabase. He is a brilliant developer who deeply understands business processes.",
+            "text": "Mohd digitized our manual workflows, boosting our operational efficiency by an impressive 40-45%. He built highly secure features, including banking-app-style session timeouts and handled our database migration to Supabase, Automated Job Assignment and Smart Inventory Management. He is a brilliant developer who deeply understands business processes.",
             "image_url": "src/assets/employer_photos/yash.png"
         }
     ]
