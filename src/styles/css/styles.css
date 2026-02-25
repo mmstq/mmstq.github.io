@@ -1106,54 +1106,46 @@ button.swiper-pagination-bullet {
 .skills-list {
     display: flex !important;
     flex-wrap: wrap !important;
-    gap: 1rem !important;
+    gap: 1.25rem !important;
     margin: 2rem 0 !important;
 }
 
 .skills-list li {
-    display: inline-block !important;
-    font-size: 3rem !important;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 0.85rem;
+    font-size: 1.5rem !important;
+    font-weight: 500;
     color: var(--color-text-dark) !important;
+    background: rgba(255, 255, 255, 0.04);
+    padding: 0.4rem 1.0rem !important;
+    border-radius: 12px;
+    border: 1px solid var(--color-border);
+    transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease;
 }
+
+.skills-list li:hover {
+    transform: translateY(-4px);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.skills-list li svg {
+    transition: all 0.3s ease;
+    font-size: 2rem !important;
+}
+
+.skills-list li:hover svg {
+    filter: brightness(1.2);
+}
+
+/* Center dot separator removed */
 
 /* Works section specific fixes */
 .s-works {
     background: var(--color-bg-overlay) !important;
     padding: 4rem 0 !important;
-}
-
-/* Skills icons styling */
-.about-expertise .skills-list li {
-    display: inline-block;
-    padding: 0 1rem;
-    font-size: 2.5rem !important;
-    transition: transform 0.3s ease;
-    position: relative;
-    color: var(--color-text-dark) !important;
-}
-
-.about-expertise .skills-list li:hover {
-    transform: scale(1.2);
-}
-
-.about-expertise .skills-list li svg {
-    transition: all 0.3s ease;
-}
-
-.about-expertise .skills-list li:hover svg {
-    filter: brightness(1.2);
-}
-
-/* Center dot separator for skills */
-.about-expertise .skills-list li:not(:last-child)::after {
-    content: "•";
-    position: absolute;
-    right: -0.5rem;
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--color-text-light);
-    font-size: 1.5rem;
-    opacity: 0.5;
 }
 
 /* Contact links with icons */
@@ -1564,6 +1556,30 @@ button.swiper-pagination-bullet {
     line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.project-card__desc--expanded {
+    -webkit-line-clamp: unset;
+    line-clamp: unset;
+}
+
+.project-card__desc-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    margin-top: 0.2rem;
+    color: var(--color-1);
+    font-size: 1.2rem;
+    cursor: pointer;
+    text-align: left;
+    display: inline-block;
+    font-family: var(--font-1);
+    font-weight: 500;
+}
+
+.project-card__desc-btn:hover {
+    text-decoration: underline;
 }
 
 /* Tech tags */
@@ -1600,9 +1616,7 @@ button.swiper-pagination-bullet {
 
 @media screen and (max-width: 768px) {
     .project-card__nav {
-        opacity: 1;
-        width: 32px;
-        height: 32px;
+        display: none !important;
     }
 
     .project-card__info {
@@ -2155,28 +2169,6 @@ a:hover {
     gap: 1rem;
 }
 
-.skills-list li {
-    display: inline-block;
-    font-size: 4rem;
-    padding: 0;
-    transition: transform 0.3s ease;
-}
-
-.skills-list li:hover {
-    transform: scale(1.2);
-}
-
-.skills-list li:not(:last-child)::after {
-    content: "•";
-    position: absolute;
-    right: -0.5rem;
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--color-text-light);
-    font-size: 1.5rem;
-    opacity: 0.5;
-}
-
 /* Timeline */
 .about-timelines {
     padding-top: var(--vspace-3);
@@ -2464,7 +2456,7 @@ a:hover {
 /* Footer */
 .s-footer {
     margin-top: auto;
-    padding: var(--vspace-1) 0 var(--vspace-3);
+    padding: var(--vspace-1) 0;
     color: var(--color-text-light);
 }
 
@@ -2610,6 +2602,10 @@ a:hover {
     .lg-6 {
         width: 100%;
     }
+
+    .text-huge-title {
+        font-size: 5rem;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -2620,7 +2616,8 @@ a:hover {
     }
 
     .text-huge-title {
-        font-size: 6rem;
+        font-size: 4rem;
+        line-height: 1.15;
     }
 
     .folio-list__item {
@@ -2637,5 +2634,9 @@ a:hover {
 @media screen and (max-width: 400px) {
     .folio-list__item-pic img {
         height: auto;
+    }
+
+    .text-huge-title {
+        font-size: 3.5rem;
     }
 }

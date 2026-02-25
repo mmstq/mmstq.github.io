@@ -11,16 +11,18 @@ import {
   faGithub
 } from '@fortawesome/free-brands-svg-icons';
 import {
-  faDatabase
+  faDatabase,
+  faNetworkWired,
+  faPlug
 } from '@fortawesome/free-solid-svg-icons';
 
 const About = () => {
   const languageSkills = [
     { icon: faDartLang, color: '#2899e4ff', name: 'Dart' },
-    { icon: faJs, color: '#cfef2eff', name: 'JavaScript' },
+    { icon: faJs, color: '#e5d96dff', name: 'JavaScript' },
     { icon: faSwift, color: '#F05138', name: 'Swift' },
     { icon: faPhp, color: '#ffffffff', name: 'PHP' },
-    { icon: faJava, color: '#df8c27ff', name: 'PHP' },
+    { icon: faJava, color: '#df8c27ff', name: 'Java' },
     { icon: faPython, color: '#3776AB', name: 'Python' }
   ];
 
@@ -29,14 +31,15 @@ const About = () => {
     { icon: faApple, color: '#ffffffff', name: 'iOS' },
     { icon: faAndroid, color: '#3DDC84', name: 'Android' },
     { icon: faStripe, color: '#008CDD', name: 'Stripe' },
-    { icon: faReact, color: '#FFCA28', name: 'Firebase' },
+    { icon: faReact, color: '#FFCA28', name: 'React' },
     { icon: faLaravel, color: '#FF2D20', name: 'Laravel' },
     { icon: faDatabase, color: '#336791', name: 'PostgreSQL' }
   ];
 
   const otherSkills = [
     { icon: faGooglePlay, color: '#2899e4ff', name: 'Play Store' },
-    { icon: faGithub, color: '#ffffffff', name: 'REST API' },
+    { icon: faGithub, color: '#ffffffff', name: 'GitHub' },
+    { icon: faPlug, color: '#8325a8ff', name: 'REST API' },
     { icon: faAppStoreIos, color: '#0D96F6', name: 'iOS Store' },
     { icon: faLinux, color: '#FCC624', name: 'Linux' },
     { icon: faDocker, color: 'hsla(210, 92%, 58%, 1.00)', name: 'Docker' },
@@ -62,7 +65,7 @@ const About = () => {
               About
             </h2>
             <p className="attention-getter" data-animate-el>
-              I build reliable solutions that solve real problems and drive growth. From idea to launch, I can deliver end-to-end.
+              I have made a lot of mistakes and learned a lot from them. I am full of energy,  have a learning attitude and easy to work with.
             </p>
             <a
               href="https://docs.google.com/document/d/1qAU7TlKWQGD051blv1xFioC74BDI8PLNcO1wsJZJrXE/edit?tab=t.0"
@@ -89,8 +92,8 @@ const About = () => {
                   <FontAwesomeIcon
                     icon={skill.icon}
                     style={{ color: skill.color }}
-                    title={skill.name}
                   />
+                  <span>{skill.name}</span>
                 </li>
               ))}
             </ul>
@@ -104,8 +107,8 @@ const About = () => {
                   <FontAwesomeIcon
                     icon={skill.icon}
                     style={{ color: skill.color }}
-                    title={skill.name}
                   />
+                  <span>{skill.name}</span>
                 </li>
               ))}
             </ul>
@@ -119,8 +122,8 @@ const About = () => {
                   <FontAwesomeIcon
                     icon={skill.icon}
                     style={{ color: skill.color }}
-                    title={skill.name}
                   />
+                  <span>{skill.name}</span>
                 </li>
               ))}
             </ul>
