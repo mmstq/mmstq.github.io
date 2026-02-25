@@ -1,5 +1,22 @@
 [
     {
+        "id": "marhaba",
+        "title": "Marhaba Auctions",
+        "logo": "0.png",
+        "description": "Built for a big auction company in Dubai. Uses WebSockets for live bidding, full payment gateway integration, and a dedicated in-app wallet. Accommodates a comprehensive vehicle lifecycle including selling and shipping cars.",
+        "tech": [
+            "Flutter",
+            "Sockets",
+            "Payments",
+            "Live Bidding",
+            "Wallet"
+        ],
+        "link": "#",
+        "screenshots": 6,
+        "screenshotExt": "png",
+        "iosLink": ""
+    },
+    {
         "id": "koor",
         "title": "Koor",
         "logo": "0.webp",
@@ -14,7 +31,8 @@
         ],
         "link": "https://play.google.com/store/apps/details?id=com.ulearnatech.koor",
         "screenshots": 6,
-        "screenshotExt": "webp"
+        "screenshotExt": "webp",
+        "iosLink": "https://apps.apple.com/no/app/koor-buy-rent-property/id6746753805"
     },
     {
         "id": "movermate",
@@ -31,7 +49,8 @@
         ],
         "link": "https://play.google.com/store/apps/details?id=com.movermate.crew_app",
         "screenshots": 4,
-        "screenshotExt": "webp"
+        "screenshotExt": "webp",
+        "iosLink": ""
     },
     {
         "id": "counsellor_app",
@@ -46,7 +65,8 @@
         ],
         "link": "https://play.google.com/store/apps/details?id=com.codexplabs.swiftcounsellorapp",
         "screenshots": 4,
-        "screenshotExt": "webp"
+        "screenshotExt": "webp",
+        "iosLink": "https://apps.apple.com/no/app/swiftams-business/id6451433255"
     },
     {
         "id": "spotted",
@@ -63,7 +83,8 @@
         ],
         "link": "https://play.google.com/store/apps/details?id=com.spottedapp.user",
         "screenshots": 5,
-        "screenshotExt": "png"
+        "screenshotExt": "png",
+        "iosLink": "https://apps.apple.com/no/app/spotted-share-with-friends/id6753819174"
     },
     {
         "id": "ssc_ai",
@@ -80,6 +101,7 @@
         ],
         "link": "https://play.google.com/store/apps/details?id=com.mmstq.quiz.ssc_quiz",
         "screenshots": 8,
-        "screenshotExt": "png"
+        "screenshotExt": "png",
+        "iosLink": ""
     }
 ]

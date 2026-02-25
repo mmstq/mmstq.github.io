@@ -20,14 +20,14 @@ const About = () => {
     { icon: faDartLang, color: '#2899e4ff', name: 'Dart' },
     { icon: faJs, color: '#e5d96dff', name: 'JavaScript' },
     { icon: faSwift, color: '#F05138', name: 'Swift' },
-    { icon: faPhp, color: '#ffffffff', name: 'PHP' },
+    { icon: faPhp, color: 'var(--color-text-dark)', name: 'PHP' },
     { icon: faJava, color: '#df8c27ff', name: 'Java' },
     { icon: faPython, color: '#3776AB', name: 'Python' }
   ];
 
   const frameworkSkills = [
     { icon: faFlutter, color: '#2899e4ff', name: 'Flutter' },
-    { icon: faApple, color: '#ffffffff', name: 'iOS' },
+    { icon: faApple, color: 'var(--color-text-dark)', name: 'iOS' },
     { icon: faAndroid, color: '#3DDC84', name: 'Android' },
     { icon: faStripe, color: '#008CDD', name: 'Stripe' },
     { icon: faReact, color: '#FFCA28', name: 'React' },
@@ -37,7 +37,7 @@ const About = () => {
 
   const otherSkills = [
     { icon: faGooglePlay, color: '#2899e4ff', name: 'Play Store' },
-    { icon: faGithub, color: '#ffffffff', name: 'GitHub' },
+    { icon: faGithub, color: 'var(--color-text-dark)', name: 'GitHub' },
     { icon: faPlug, color: '#8325a8ff', name: 'REST API' },
     { icon: faAppStoreIos, color: '#0D96F6', name: 'iOS Store' },
     { icon: faLinux, color: '#FCC624', name: 'Linux' },

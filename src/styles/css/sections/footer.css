@@ -1,0 +1,76 @@
+/* Footer */
+.s-footer {
+    margin-top: auto;
+    padding: var(--vspace-1) 0;
+    color: var(--color-text-light);
+}
+
+.s-footer .row {
+    position: relative;
+}
+
+.s-footer a {
+    color: var(--color-text);
+}
+
+.s-footer a:hover {
+    color: white;
+}
+
+.ss-copyright {
+    margin-top: calc(var(--vspace-0_25) * -1);
+    margin-right: 5.2rem;
+    line-height: var(--vspace-0_875);
+}
+
+.ss-copyright span {
+    font-size: var(--text-sm);
+    display: inline-block;
+}
+
+.ss-copyright span::after {
+    content: "|";
+    display: inline-block;
+    padding: 0 0.8rem 0 1rem;
+    color: rgba(255, 255, 255, 0.1);
+}
+
+.ss-copyright span:last-child::after {
+    display: none;
+}
+
+.ss-go-top {
+    position: absolute;
+    top: calc(var(--vspace-1) * -1);
+    right: var(--gutter);
+}
+
+.ss-go-top a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(1.625 * var(--space));
+    width: var(--vspace-1_5);
+    background-color: var(--color-body);
+    border: 1px solid var(--color-text);
+    transition: all 0.3s ease;
+}
+
+.ss-go-top a:hover {
+    background-color: white;
+    border-color: white;
+}
+
+.ss-go-top a:hover svg path {
+    fill: black;
+}
+
+.ss-go-top svg {
+    height: var(--vspace-0_5);
+    width: var(--vspace-0_5);
+}
+
+.ss-go-top svg path {
+    fill: white;
+}
+

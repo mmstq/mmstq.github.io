@@ -1,0 +1,149 @@
+/* Base Styles */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: var(--font-1);
+    font-size: var(--base-font-size);
+    font-weight: 300;
+    line-height: var(--vspace-1);
+    color: var(--color-text);
+    background-color: var(--color-body);
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-2);
+    font-weight: 400;
+    color: var(--color-text-dark);
+    margin: 0;
+}
+
+h1 {
+    font-size: var(--text-display-1);
+    line-height: var(--vspace-2);
+}
+
+h2 {
+    font-size: var(--text-xxl);
+    line-height: var(--vspace-1_5);
+}
+
+h3 {
+    font-size: var(--text-xl);
+    line-height: 1.25;
+}
+
+h4 {
+    font-size: var(--text-lg);
+}
+
+h5 {
+    font-size: var(--text-md);
+}
+
+p {
+    margin: 0 0 var(--vspace-1) 0;
+}
+
+a {
+    color: var(--color-1);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-2);
+}
+
+/* Grid System */
+.row {
+    width: 92%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column {
+    display: block;
+    flex: 1 1 0%;
+    padding: 0 var(--gutter);
+}
+
+.lg-6 {
+    flex: none;
+    width: 50%;
+}
+
+.lg-12 {
+    flex: none;
+    width: 100%;
+}
+
+/* Page Structure */
+.s-pagewrap {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.circles {
+    position: absolute;
+    width: 70vw;
+    height: 70vw;
+    top: calc(100vh - 70vw);
+    left: calc(100% - 33vw);
+}
+
+.circles span {
+    position: absolute;
+    display: block;
+    border: 1px solid var(--color-1);
+    border-radius: 50%;
+    opacity: 0.1;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+}
+
+.circles span:nth-child(1) {
+    height: 100%;
+    width: 100%;
+}
+
+.circles span:nth-child(2) {
+    height: 80%;
+    width: 80%;
+}
+
+.circles span:nth-child(3) {
+    height: 60%;
+    width: 60%;
+}
+
+.circles span:nth-child(4) {
+    height: 40%;
+    width: 40%;
+}
+
+.circles span:nth-child(5) {
+    height: 20%;
+    width: 20%;
+}
+

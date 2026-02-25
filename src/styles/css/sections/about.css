@@ -1,0 +1,214 @@
+/* About section specific fixes */
+.s-about {
+    background: var(--color-bg-overlay) !important;
+    padding: 4rem 0 !important;
+}
+
+.about-info__pic {
+    display: block !important;
+    width: 80% !important;
+    border-radius: 100px !important;
+    max-width: 400px !important;
+
+}
+
+.skills-list {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 1.25rem !important;
+    margin: 2rem 0 !important;
+}
+
+.skills-list li {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 0.85rem;
+    font-size: 1.5rem !important;
+    font-weight: 500;
+    color: var(--color-text-dark) !important;
+    background: var(--color-bg-skill, rgba(255, 255, 255, 0.04));
+    padding: 0.4rem 1.0rem !important;
+    border-radius: 12px;
+    border: 1px solid var(--color-border);
+    transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+}
+
+.skills-list li:hover {
+    transform: translateY(-4px);
+    background: var(--color-bg-skill-hover, rgba(255, 255, 255, 0.08));
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.skills-list li svg {
+    transition: all 0.3s ease;
+    font-size: 2rem !important;
+}
+
+.skills-list li:hover svg {
+    filter: brightness(1.2);
+}
+
+/* Center dot separator removed */
+
+/* About Section */
+.s-about {
+    padding: var(--vspace-4) 0 var(--vspace-3);
+}
+
+.about-info {
+    width: 100%;
+    align-items: center;
+}
+
+.about-info__pic {
+    object-fit: cover;
+    margin: 0;
+    vertical-align: bottom;
+    max-width: 100%;
+    height: auto;
+}
+
+.about-info__text {
+    padding: var(--vspace-3_5) 10vw var(--vspace-2) 0;
+    margin-left: -4rem;
+}
+
+.attention-getter {
+    font-family: var(--font-1);
+    font-weight: 300;
+    font-size: var(--text-md);
+    line-height: var(--vspace-1_25);
+    color: var(--color-text-dark);
+}
+
+.btn {
+    display: inline-block;
+    font-family: var(--font-1);
+    font-weight: 600;
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.35em;
+    height: var(--vspace-2);
+    line-height: calc(var(--vspace-2) - 2px);
+    padding: 0 3.6rem;
+    margin: var(--vspace-1) 0.4rem var(--vspace-0_5) 0;
+    color: var(--color-1);
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    background-color: #2c2c2d;
+    border: 1px solid #2c2c2d;
+    border-radius: 16px;
+}
+
+.btn:hover {
+    background-color: var(--color-text-dark);
+    border-color: var(--color-text-dark);
+    color: var(--color-body);
+}
+
+.btn--medium {
+    height: calc(var(--vspace-2) + 0.8rem);
+    line-height: calc(var(--vspace-2) + 0.8rem - 2px);
+}
+
+.u-fullwidth {
+    width: 100%;
+}
+
+/* Skills */
+.about-expertise {
+    padding-top: calc(6 * var(--space));
+}
+
+.skills-section {
+    margin-bottom: 25px;
+}
+
+.skills-section .skills-subtitle {
+    margin-bottom: 1px;
+    font-size: var(--text-lg);
+    color: var(--color-text-dark);
+}
+
+.skills-list {
+    list-style: none;
+    margin: 1px 0 var(--vspace-1) 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* Timeline */
+.about-timelines {
+    padding-top: var(--vspace-3);
+}
+
+.timeline {
+    margin-top: var(--vspace-1_25);
+    padding-right: 1vw;
+    position: relative;
+}
+
+.timeline::before {
+    content: "";
+    display: block;
+    width: 1px;
+    height: calc(100% - var(--vspace-0_5));
+    background-color: var(--color-border);
+    position: absolute;
+    top: var(--vspace-0_5);
+    left: 3px;
+}
+
+.timeline__block {
+    padding-left: var(--vspace-1_75);
+    padding-bottom: var(--vspace-0_5);
+    position: relative;
+}
+
+/* Add left padding to timeline header and description */
+.timeline__header {
+    padding-left: 2rem;
+}
+
+.timeline__desc {
+    padding-left: 2rem;
+}
+
+.timeline__bullet {
+    display: block;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background-color: var(--color-1);
+    position: absolute;
+    top: var(--vspace-0_5);
+    left: 0;
+}
+
+.timeline__title {
+    font-family: var(--font-1);
+    font-weight: 500;
+    font-size: var(--text-lg);
+    margin: 0 0 var(--vspace-0_125) 0;
+}
+
+.timeline__meta {
+    font-family: var(--font-1);
+    font-weight: 300;
+    font-size: calc(var(--base-font-size) * 1.1053);
+    margin: 0 0 var(--vspace-0_125) 0;
+}
+
+.timeline__timeframe {
+    font-size: var(--text-sm);
+    line-height: var(--vspace-0_75);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--color-text-light);
+    margin-top: -0.2rem;
+}
+

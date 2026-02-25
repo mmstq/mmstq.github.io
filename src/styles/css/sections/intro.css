@@ -1,0 +1,103 @@
+/* Sections */
+.s-intro {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: var(--header-height);
+}
+
+.intro-content {
+    min-height: calc(25.5 * var(--space));
+    justify-content: center;
+    align-items: center;
+    padding-top: calc(8vh + var(--header-height));
+    padding-bottom: var(--vspace-3);
+}
+
+.text-huge-title {
+    font-size: 8rem;
+    line-height: 1.1;
+    margin: 0;
+}
+
+.text-pretitle {
+    font-family: var(--font-1);
+    font-size: var(--text-sm);
+    font-weight: 400;
+    color: var(--color-white);
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    margin: 0 0 var(--vspace-0_5) 0.2rem;
+}
+
+.text-pretitle.with-line {
+    color: var(--color-1);
+    padding-left: 6rem;
+    transform: translateX(-6rem);
+}
+
+.text-pretitle.with-line::before {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 4rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    top: 50%;
+    left: 0;
+}
+
+.intro-social {
+    list-style: none;
+    display: flex;
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    margin: 0;
+    padding: 0 0 0 9.6rem;
+    transform: rotate(-90deg) translateX(-50%);
+    transform-origin: left bottom;
+    position: absolute;
+    top: 55%;
+    left: calc(100% - 6rem);
+}
+
+.intro-social li {
+    padding: 0 1.2rem;
+}
+
+.intro-social a {
+    color: var(--color-text-light);
+}
+
+.intro-social a:hover {
+    color: var(--color-1);
+}
+
+.intro-scrolldown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: var(--vspace-1);
+    width: var(--vspace-1);
+    position: absolute;
+    bottom: 4.8rem;
+    right: 5.8rem;
+}
+
+.intro-scrolldown svg {
+    height: var(--vspace-0_75);
+    width: var(--vspace-0_75);
+}
+
+.intro-scrolldown svg path {
+    fill: white;
+    transition: all 0.3s ease;
+}
+
+.intro-scrolldown:hover svg path {
+    fill: var(--color-1);
+}
+

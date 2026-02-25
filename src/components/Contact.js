@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGoogle, faWhatsapp, faLinkedin, faGithub, faGooglePlay } from '@fortawesome/free-brands-svg-icons';
-import { faLink } from '@fortawesome/free-solid-svg-icons';
+import { faWhatsapp, faLinkedin, faGithub, faGooglePlay, faTelegram } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 const Contact = () => {
   return (
@@ -21,49 +21,45 @@ const Contact = () => {
       </div>
 
       <div className="row contact-bottom">
-        <div className="column lg-3 md-5 tab-6 stack-on-550 contact-block">
+        <div className="column lg-6 md-12 tab-12 contact-block">
           <h3 className="text-pretitle">Reach me at</h3>
-          <p className="contact-links">
-            <a href="mailto:mohdmushtak59@gmail.com" className="mailtoui">
-              <FontAwesomeIcon icon={faGoogle} style={{ color: '#DB4437', fontSize: '2.5rem', marginRight: '1rem' }} />
-            </a>
-            <a href="https://wa.me/917011152375" target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faWhatsapp} style={{ color: '#25D366', fontSize: '2.5rem' }} />
-            </a>
-          </p>
-        </div>
-        <div className="column lg-4 md-5 tab-6 stack-on-550 contact-block">
-          <h3 className="text-pretitle">Social</h3>
-          <ul className="contact-social">
+          <ul className="skills-list" style={{ justifyContent: 'flex-start' }}>
             <li>
-              <a href="https://linkedin.com/in/mohdmustak" target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon icon={faLinkedin} style={{ color: '#0077B5', fontSize: '2.5rem', verticalAlign: 'middle' }} />
+              <a href="mailto:mohdmushtak59@gmail.com" className="mailtoui" style={{ color: 'inherit', display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                <FontAwesomeIcon icon={faEnvelope} style={{ color: '#DB4437' }} /> Email
               </a>
             </li>
             <li>
-              <a href="https://github.com/mmstq" target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon icon={faGithub} style={{ color: 'var(--color-text-dark)', fontSize: '2.5rem', verticalAlign: 'middle' }} />
+              <a href="https://wa.me/917011152375" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                <FontAwesomeIcon icon={faWhatsapp} style={{ color: '#25D366' }} /> WhatsApp
               </a>
             </li>
             <li>
-              <a href="https://play.google.com/store/apps/developer?id=mmstq" target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon icon={faGooglePlay} style={{ color: '#2899e4ff', fontSize: '2.5rem', verticalAlign: 'middle' }} />
-              </a>
-            </li>
-            <li>
-              <a href="https://linktr.ee/mmstq" target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon icon={faLink} style={{ color: '#43E660', fontSize: '2.5rem', verticalAlign: 'middle' }} />
+              <a href="https://t.me/mmstq" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                <FontAwesomeIcon icon={faTelegram} style={{ color: '#2CA5E0' }} /> Telegram
               </a>
             </li>
           </ul>
         </div>
-        <div className="column lg-4 md-12 contact-block">
-          <a
-            href="mailto:mohdmushtak59@gmail.com"
-            className="mailtoui btn btn--medium u-fullwidth contact-btn"
-          >
-            Say Hello.
-          </a>
+        <div className="column lg-6 md-12 tab-12 contact-block">
+          <h3 className="text-pretitle">Social</h3>
+          <ul className="skills-list" style={{ justifyContent: 'flex-start' }}>
+            <li>
+              <a href="https://linkedin.com/in/mohdmustak" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                <FontAwesomeIcon icon={faLinkedin} style={{ color: '#0077B5' }} /> LinkedIn
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/mmstq" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                <FontAwesomeIcon icon={faGithub} style={{ color: 'var(--color-text-dark)' }} /> GitHub
+              </a>
+            </li>
+            <li>
+              <a href="https://play.google.com/store/apps/developer?id=mmstq" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                <FontAwesomeIcon icon={faGooglePlay} style={{ color: '#2899e4ff' }} /> Play Store
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </section>

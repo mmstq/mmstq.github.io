@@ -1,0 +1,178 @@
+/* Modal overlay for React */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 2rem;
+}
+
+/* Force visibility and debugging */
+.target-section {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+    display: block !important;
+    background: var(--color-bg-modal) !important;
+    border: 1px solid var(--color-border) !important;
+    min-height: 50vh !important;
+    padding: 4rem 0 !important;
+}
+
+.target-section * {
+    opacity: 1 !important;
+    visibility: visible !important;
+    /* Remove color: white !important to allow theme colors */
+}
+
+.target-section h1,
+.target-section h2,
+.target-section h3,
+.target-section h4,
+.target-section h5,
+.target-section h6 {
+    color: var(--color-text-dark) !important;
+    display: block !important;
+    margin: 1rem 0 !important;
+}
+
+.target-section p {
+    color: var(--color-text) !important;
+    display: block !important;
+    margin: 1rem 0 !important;
+}
+
+.target-section img {
+    display: block !important;
+    max-width: 100% !important;
+    height: auto !important;
+    opacity: 1 !important;
+}
+
+/* Works section specific fixes */
+.s-works {
+    background: var(--color-bg-overlay) !important;
+    padding: 4rem 0 !important;
+}
+
+/* Contact links with icons */
+.contact-links a svg {
+    margin-right: 0.5rem;
+    font-size: 2rem;
+    vertical-align: middle;
+}
+
+.contact-links a {
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    color: var(--color-text-light) !important;
+}
+
+.contact-links a:hover {
+    transform: translateX(5px);
+    color: var(--color-1) !important;
+}
+
+/* Works Section */
+.s-works {
+    padding: var(--vspace-5) 0 var(--vspace-3_5);
+}
+
+.folio-list {
+    list-style: none;
+    margin: var(--vspace-4) 0 var(--vspace-1) 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.folio-list__item {
+    flex: 1 1 300px;
+    min-width: 300px;
+    margin-bottom: var(--vspace-1);
+    position: relative;
+}
+
+.folio-list__item-link {
+    display: block;
+    width: 100%;
+    color: white;
+    transition: all 0.5s ease;
+}
+
+.folio-list__item-link:hover {
+    color: var(--color-1);
+}
+
+.folio-list__item-pic {
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+.folio-list__item-pic img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin: 0;
+    transition: transform 0.3s ease;
+}
+
+.folio-list__item-link:hover .folio-list__item-pic img {
+    transform: scale(1.05);
+}
+
+.folio-list__item-text {
+    padding-top: var(--vspace-0_5);
+    border-top: 1px solid var(--color-border);
+    position: relative;
+}
+
+.folio-list__item-title {
+    font-family: var(--font-1);
+    font-weight: 500;
+    font-size: var(--text-lg);
+    margin: 0.5rem 0;
+}
+
+.folio-list__item-cat {
+    font-size: var(--text-sm);
+    color: var(--color-text-light);
+    line-height: var(--vspace-0_75);
+    margin-left: 0.2rem;
+}
+
+.folio-list__proj-link {
+    display: block;
+    height: var(--vspace-1);
+    width: var(--vspace-1);
+    position: absolute;
+    top: 0.8rem;
+    right: var(--vspace-0_75);
+}
+
+.folio-list__proj-link svg {
+    height: var(--vspace-0_5);
+    width: var(--vspace-0_5);
+    transform: translate(-50%, -50%) rotate(-45deg);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.folio-list__proj-link svg path {
+    fill: white;
+}
+
+.folio-list__proj-link:hover {
+    transform: scale(1.2);
+}
+

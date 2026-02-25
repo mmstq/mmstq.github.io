@@ -1,0 +1,108 @@
+/* Header */
+.s-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.header-mobile {
+    display: none;
+    height: var(--header-height);
+    background-color: var(--color-bg-nav);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-bg-nav);
+    border: 1px solid var(--color-border);
+    border-top: none;
+}
+
+.main-nav li {
+    flex: 1;
+    border-right: 1px solid var(--color-border);
+}
+
+.main-nav li:last-child {
+    border-right: none;
+}
+
+.main-nav a {
+    display: block;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: var(--header-height);
+    text-transform: uppercase;
+    letter-spacing: 0.35em;
+    color: var(--color-text-dark);
+    padding: 0 2rem 0 2.4rem;
+    transition: all 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: var(--color-1);
+}
+
+.main-nav .current a {
+    background-color: var(--color-bg-card);
+    color: var(--color-1);
+}
+
+/* Mobile Menu */
+.mobile-home-link a {
+    display: block;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: var(--header-height);
+    text-transform: uppercase;
+    letter-spacing: 0.35em;
+    color: var(--color-text-dark);
+    padding: 0 0.4rem;
+    margin-left: 2.4rem;
+}
+
+.mobile-menu-toggle {
+    display: block;
+    width: var(--header-height);
+    height: var(--header-height);
+    position: absolute;
+    top: 0;
+    right: 0.8rem;
+}
+
+.mobile-menu-toggle span {
+    display: block;
+    background-color: var(--color-text-dark);
+    width: 24px;
+    height: 1px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transition: all 0.2s ease;
+}
+
+.mobile-menu-toggle span::before,
+.mobile-menu-toggle span::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+    position: absolute;
+    left: 0;
+    transition: all 0.2s ease;
+}
+
+.mobile-menu-toggle span::before {
+    top: -8px;
+}
+
+.mobile-menu-toggle span::after {
+    bottom: -8px;
+}
+

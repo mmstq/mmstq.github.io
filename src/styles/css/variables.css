@@ -1,0 +1,58 @@
+/* CSS Variables */
+:root {
+    --font-1: "Ubuntu", sans-serif;
+    --font-2: "Ubuntu", sans-serif;
+
+    --color-1: hsla(36, 72%, 70%, 1);
+    --color-2: hsla(168, 62%, 36%, 1);
+    --color-body: #141516;
+    --color-text: #a1a1a2;
+    --color-text-dark: #ffffff;
+    --color-text-light: #5b5b5c;
+    --color-border: rgba(255, 255, 255, .05);
+
+    --base-font-size: 1.9rem;
+    --space: 3.2rem;
+    --vspace-0_5: calc(0.5 * var(--space));
+    --vspace-1: var(--space);
+    --vspace-1_5: calc(1.5 * var(--space));
+    --vspace-2: calc(2 * var(--space));
+    --vspace-3: calc(3 * var(--space));
+    --vspace-4: calc(4 * var(--space));
+
+    --text-sm: 1.583rem;
+    --text-md: 2.28rem;
+    --text-lg: 2.736rem;
+    --text-xl: 3.283rem;
+    --text-xxl: 3.94rem;
+    --text-display-1: 5.673rem;
+
+    --header-height: 6.4rem;
+    --gutter: 2rem;
+}
+
+[data-theme="light"] {
+    --color-body: #f5f5f5;
+    --color-text: #4b4b4b;
+    --color-text-dark: #1a1a1a;
+    --color-text-light: #6b6b6b;
+    --color-border: rgba(0, 0, 0, .1);
+    --color-bg-card: #ffffff;
+    --color-bg-overlay: rgba(245, 245, 245, 0.5);
+    --color-bg-nav: rgba(255, 255, 255, 0.95);
+    --color-bg-modal: #ffffff;
+    --shadow-card: 0 0 25px rgba(0, 0, 0, 0.08);
+    --color-bg-skill: #ffffff;
+    --color-bg-skill-hover: rgba(245, 245, 245, 1);
+}
+
+[data-theme="dark"] {
+    --color-bg-card: rgba(255, 255, 255, 0.04);
+    --color-bg-overlay: rgba(0, 0, 0, 0.3);
+    --color-bg-nav: #141516;
+    --color-bg-modal: rgba(255, 255, 255, 0.02);
+    --shadow-card: 0 0 40px rgba(0, 0, 0, 0.4);
+    --color-bg-skill: rgba(255, 255, 255, 0.04);
+    --color-bg-skill-hover: rgba(255, 255, 255, 0.08);
+}
+

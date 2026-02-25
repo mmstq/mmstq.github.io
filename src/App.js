@@ -10,7 +10,7 @@ import ThemeToggle from './components/ThemeToggle';
 import { ThemeProvider } from './context/ThemeContext';
 
 // Import styles in correct order
-import './styles/css/styles.css';
+import './styles/css/index.css';
 import './styles/toggle.css';
 
 function App() {
