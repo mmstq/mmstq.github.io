@@ -6,7 +6,7 @@
         "description": "Built for a big auction company in Dubai. Uses WebSockets for live bidding, full payment gateway integration, and a dedicated in-app wallet. Accommodates a comprehensive vehicle lifecycle including selling and shipping cars.",
         "tech": [
             "Flutter",
-            "Sockets",
+            "WebSockets",
             "Payments",
             "Live Bidding",
             "Wallet"
@@ -31,7 +31,7 @@
         ],
         "link": "https://play.google.com/store/apps/details?id=com.ulearnatech.koor",
         "screenshots": 6,
-        "screenshotExt": "webp",
+        "screenshotExt": "jpg",
         "iosLink": "https://apps.apple.com/no/app/koor-buy-rent-property/id6746753805"
     },
     {
@@ -49,7 +49,7 @@
         ],
         "link": "https://play.google.com/store/apps/details?id=com.movermate.crew_app",
         "screenshots": 4,
-        "screenshotExt": "webp",
+        "screenshotExt": "jpg",
         "iosLink": "https://apps.apple.com/no/app/movermate-crew/id6737702875"
     },
     {
@@ -65,7 +65,7 @@
         ],
         "link": "https://play.google.com/store/apps/details?id=com.codexplabs.swiftcounsellorapp",
         "screenshots": 4,
-        "screenshotExt": "webp",
+        "screenshotExt": "jpg",
         "iosLink": "https://apps.apple.com/no/app/swiftams-business/id6451433255"
     },
     {
