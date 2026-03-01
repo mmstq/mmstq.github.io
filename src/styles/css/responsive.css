@@ -1,7 +1,12 @@
 /* Responsive Design */
 @media screen and (max-width: 800px) {
+    .s-header {
+        pointer-events: none;
+    }
+
     .header-mobile {
         display: block;
+        pointer-events: auto;
     }
 
     .main-nav-wrap {
@@ -9,6 +14,8 @@
         transform-origin: center top;
         background-color: var(--color-body);
         border-bottom: 1px solid var(--color-border);
+        visibility: hidden;
+        pointer-events: none;
     }
 
     .main-nav {
@@ -40,8 +47,14 @@
         color: var(--color-text);
     }
 
+    .menu-is-open .s-header {
+        pointer-events: auto;
+    }
+
     .menu-is-open .main-nav-wrap {
         transform: scaleY(1);
+        visibility: visible;
+        pointer-events: auto;
         transition: transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
     }
 

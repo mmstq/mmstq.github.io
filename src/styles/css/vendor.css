@@ -1499,12 +1499,20 @@ button.swiper-pagination-bullet {
         padding: 2px 8px;
     }
 
-    .testimonial-carousel__content {
-        padding: 1.5rem 1rem;
+    /* Reduce horizontal margin for works & testimonials rows */
+    .s-works>.row,
+    .testimonials {
+        padding-left: 2vw !important;
+        padding-right: 2vw !important;
     }
 
+    /* Remove outer slide padding, use inner content padding instead */
     .testimonial-carousel__slide {
-        padding: 1.5rem 1rem !important;
+        padding: 0.5rem 0 !important;
+    }
+
+    .testimonial-carousel__content {
+        padding: 1.5rem 1.8rem;
     }
 
     .testimonial-carousel__text {
@@ -1518,6 +1526,10 @@ button.swiper-pagination-bullet {
 }
 
 @media screen and (max-width: 480px) {
+    .testimonial-carousel__content {
+        padding: 1.2rem 1.2rem;
+    }
+
     .project-card__logo {
         width: 28px !important;
         height: 28px !important;
