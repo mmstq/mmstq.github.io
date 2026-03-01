@@ -1503,6 +1503,10 @@ button.swiper-pagination-bullet {
         padding: 1.5rem 1rem;
     }
 
+    .testimonial-carousel__slide {
+        padding: 1.5rem 1rem !important;
+    }
+
     .testimonial-carousel__text {
         font-size: 1.25rem !important;
     }
